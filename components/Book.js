@@ -42,18 +42,29 @@ export default function Book() {
           className="grid md:grid-cols-2 gap-16 items-center"
         >
           <div className="relative flex justify-center">
-            <div className="absolute inset-0 bg-gradient-to-br from-gold to-accent rounded-3xl blur-3xl opacity-40 animate-pulse-glow"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-gold to-accent rounded-3xl blur-3xl opacity-30 animate-pulse-glow"></div>
             <motion.div
-              whileHover={{ rotateY: 15, rotateX: -10, scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 300 }}
-              className="relative w-72 h-96 bg-gradient-to-br from-gold-400 to-yellow-600 rounded-lg shadow-2xl border-4 border-white/20 p-4"
-              style={{ transformStyle: 'preserve-3d', perspective: '1000px' }}
+              whileHover={{ rotateY: 20, rotateX: -12, scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 200, damping: 20 }}
+              className="relative w-72 h-[420px] rounded-r-2xl shadow-[15px_15px_30px_rgba(0,0,0,0.5)] border-y border-r border-white/20 cursor-pointer overflow-hidden flex"
+              style={{ 
+                transformStyle: 'preserve-3d', 
+                perspective: '1200px',
+                transformOrigin: 'left center' 
+              }}
             >
-              <div className="w-full h-full bg-dark/20 rounded-lg flex flex-col items-center justify-center p-6 text-center">
-                <BookIcon className="w-20 h-20 text-gold mb-4" />
-                <h3 className="text-2xl font-display font-bold text-white">Na Descoberta de Mim</h3>
-                <div className="w-12 h-1 bg-white/50 my-4"></div>
-                <p className="text-sm text-white/80 italic">"A jornada mais longa é aquela que nos leva de volta para nós mesmos."</p>
+              {/* Lombada Simulada do Livro */}
+              <div className="w-4 h-full bg-gradient-to-r from-yellow-700 via-yellow-600 to-yellow-800 border-r border-white/10 z-20 flex-shrink-0"></div>
+              
+              {/* Capa Principal com Imagem Premium */}
+              <div className="relative flex-grow h-full bg-dark">
+                {/* Overlay de Brilho */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-black/50 via-transparent to-white/10 z-10 pointer-events-none"></div>
+                <img 
+                  src="/images/placeholders/book-cover.png" 
+                  alt="Capa do Livro Na Descoberta de Mim" 
+                  className="w-full h-full object-cover z-0" 
+                />
               </div>
             </motion.div>
           </div>

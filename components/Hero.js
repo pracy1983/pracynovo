@@ -83,19 +83,22 @@ export default function Hero() {
 
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 animate-pulse-glow"></div>
+      {/* Imagem de Fundo Premium e Máscaras de Gradiente */}
+      <div className="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-lighten pointer-events-none" style={{ backgroundImage: "url('/images/placeholders/hero-background.png')" }}></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-dark/40 via-dark/90 to-dark"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 animate-pulse-glow opacity-75"></div>
       
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
           animate={{
             background: [
-              'radial-gradient(circle at 20% 50%, rgba(124, 58, 237, 0.3) 0%, transparent 50%)',
-              'radial-gradient(circle at 80% 50%, rgba(236, 72, 153, 0.3) 0%, transparent 50%)',
-              'radial-gradient(circle at 50% 80%, rgba(249, 115, 22, 0.3) 0%, transparent 50%)',
-              'radial-gradient(circle at 20% 50%, rgba(124, 58, 237, 0.3) 0%, transparent 50%)',
+              'radial-gradient(circle at 20% 50%, rgba(124, 58, 237, 0.35) 0%, transparent 50%)',
+              'radial-gradient(circle at 80% 50%, rgba(236, 72, 153, 0.35) 0%, transparent 50%)',
+              'radial-gradient(circle at 50% 80%, rgba(249, 115, 22, 0.35) 0%, transparent 50%)',
+              'radial-gradient(circle at 20% 50%, rgba(124, 58, 237, 0.35) 0%, transparent 50%)',
             ]
           }}
-          transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+          transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
           className="absolute inset-0"
         />
       </div>
@@ -111,11 +114,15 @@ export default function Hero() {
           transition={{ duration: 1, type: "spring" }}
           className="mb-12"
         >
-          <div className="relative w-56 h-56 mx-auto mb-8">
-            <div className="absolute inset-0 gradient-rainbow rounded-full blur-2xl opacity-60 animate-pulse"></div>
-            <div className="relative w-full h-full rounded-full bg-gradient-to-br from-primary via-secondary to-accent p-2 shadow-2xl animate-glow">
-              <div className="w-full h-full rounded-full bg-dark flex items-center justify-center border-4 border-white/10">
-                <span className="text-8xl">🦄</span>
+          <div className="relative w-60 h-60 mx-auto mb-8">
+            <div className="absolute inset-0 gradient-rainbow rounded-full blur-2xl opacity-75 animate-pulse"></div>
+            <div className="relative w-full h-full rounded-full bg-gradient-to-br from-primary via-secondary to-accent p-[3px] shadow-2xl animate-glow overflow-hidden">
+              <div className="w-full h-full rounded-full bg-dark/90 overflow-hidden flex items-center justify-center border-4 border-white/10">
+                <img 
+                  src="/images/placeholders/pracy-portrait.png" 
+                  alt="Retrato de Pracy" 
+                  className="w-full h-full object-cover rounded-full transform hover:scale-110 transition-transform duration-500" 
+                />
               </div>
             </div>
           </div>
