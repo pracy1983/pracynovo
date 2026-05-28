@@ -40,7 +40,7 @@ Este documento serve para organizar e rastrear o progresso de cada tarefa necess
 - [x] Polir os ângulos de rotação do efeito perspectiva ao hover
 
 ### 🛠️ Fase 7: Revisão, Performance & Testes
-- [ ] Rodar o servidor de desenvolvimento `npm run dev` localmente
-- [ ] Verificar a aba Network para garantir 0 ocorrências de erros 404
-- [ ] Testar responsividade móvel em telas pequenas e tablets
-- [ ] Fazer commit final no Git e publicar as mudanças na ramificação atual
+- [x] Rodar o servidor de desenvolvimento `npm run dev` localmente
+- [x] Verificar a aba Network para garantir 0 ocorrências de erros 404
+- [x] Testar responsividade móvel em telas pequenas e tablets
+- [x] Fazer commit final no Git e publicar as mudanças na ramificação atual
