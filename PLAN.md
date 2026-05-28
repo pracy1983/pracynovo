@@ -1,63 +1,47 @@
-# Plano de Implementação - Redesenho e Polimento do Pracy Hub Místico
+# Novo Plano de Implementação - Design Moderno, Minimalista e Equilibrado
 
-Este documento apresenta a estratégia de redesenho e polimento visual e funcional para transformar o site de Pracy em um Hub vibrante, artístico, místico e de padrão internacional, eliminando placeholders genéricos e integrando fotos reais de alta qualidade.
-
----
-
-## 🔮 Objetivo Principal
-
-Substituir os recursos visuais provisórios (emojis e arquivos 404) por assets reais ultra-premium gerados especificamente para o projeto, refinar as transições e estilos Tailwind nos componentes do site, e certificar-se de que tudo carrega com perfeição e alta performance no Next.js.
+Este documento apresenta a estratégia revisada para redesenhar o site de Pracy, adotando uma abordagem moderna, minimalista de padrão internacional, com proporções contidas, grids bem-diagramados, sem poluição visual ou imagens superdimensionadas desnecessárias.
 
 ---
 
-## 🛡️ Decisões de Design (Acessibilidade & Estética Premium)
+## 🔍 Análise de Causa Raiz (RCA) do Layout Anterior
 
-1. **Wow Factor & Cores:** Uso estratégico da paleta de cores "Arco-íris Místico" com roxos profundos (`#0F0F1E` no background), contrastando com glows neon saturados (rosa, laranja, ciano e ouro) que dão profundidade espacial e brilho mágico ao hub.
-2. **Substituição de Emojis por Assets Reais:** No Hero, o emoji `🦄` será substituído pelo retrato premium da Pracy com uma aura mágica animada.
-3. **Otimização de Mídia:** Criação de imagens de alta resolução no formato correto e salvas no diretório `public/images/placeholders/` e `public/images/` para resolver todos os erros de carregamento e 404 detectados no console.
-4. **Responsividade Estrita:** Garantia de flexibilidade total em celulares (1 coluna, textos centralizados, espaçamentos menores) até telas de alta resolução (layouts fluidos de 3-4 colunas, assimetrias agradáveis).
-
----
-
-## 🖼️ Mapeamento de Assets de Mídia a Serem Gerados
-
-Usaremos a inteligência de geração de imagens de ponta para produzir os seguintes assets premium:
-
-| Nome do Arquivo | Descrição Visual | Resolução | Onde será usado |
-| :--- | :--- | :--- | :--- |
-| `pracy-portrait.jpg` | Retrato de uma jovem e bela mulher com estilo alternativo místico e cabelos com nuances coloridas de roxo/rosa. Expressão calorosa e mágica, estúdio de dublagem profissional ao fundo com iluminação suave em tons de violeta e dourado. | 800x800px | Hero Section (Imagem Principal) |
-| `hero-background.jpg` | Fundo abstrato místico em alta resolução, com desfoques suaves de lente, orbs luminosas, nuances de roxo profundo, magenta e poeira estelar dourada. | 1920x1080px | Hero Section (Fundo) |
-| `about-photo.jpg` | Foto casual e artística da Pracy sorrindo em um estúdio moderno, com microfone de gravação profissional à frente e luzes neon vibrantes de arco-íris cobrindo a cena. | 600x800px | Seção Quem Sou Eu (Sobre) |
-| `album-cover.jpg` | Capa de álbum musical mística intitulada "Transcendental", contendo artes abstratas de geometria sagrada, nebulosas estelares e luz cósmica em tons de azul profundo e dourado. | 600x600px | Seção Música (Álbum) |
-| `book-cover.jpg` | Capa do livro "Na Descoberta de Mim" contendo o contorno de uma borboleta cintilante feita de pura luz dourada sobre um fundo de floresta mágica noturna com tons roxos e névoa esotérica. | 600x900px | Seção Livro (Destaque) |
+1. **Seta Azul Gigante (Print 1):** Ocorreu devido ao uso da classe inválida `w-4.5 h-4.5` no SVG da seta. Como o Tailwind não possui essa classe mapeada nativamente, o SVG ficou sem largura e altura explícitas no CSS compilado, fazendo com que ele se expandisse para ocupar 100% da largura e altura da tela.
+2. **Imagens Gigantescas no About (Print 2 & 3):** A imagem `about-photo.png` foi renderizada com `w-full h-auto` em uma coluna de grid que se alarga muito em telas horizontais largas, fazendo com que a imagem se expandisse de forma desproporcional e engolisse toda a viewport vertical do usuário.
+3. **Hero Esmagado e Sobreposto (Print 2):** O Hero forçava um `min-h-screen` com paddings dinâmicos e um avatar de 240px (`w-60 h-60`), o que empurrava as coisas para fora da viewport em telas curtas ou janelas não maximizadas, atropelando os textos e o menu.
 
 ---
 
-## 🛠️ Mudanças Propostas por Componente
+## 🎨 Diretrizes do Novo Design Minimalista & Premium
 
-### 🌟 Componente Hero (`components/Hero.js`)
-* **Modificação:** Substituição do emoji `🦄` pela imagem real `pracy-portrait.jpg` com animação de entrada suave e borda iluminada com gradiente giratório.
-* **Fundo:** Aplicação da imagem `hero-background.jpg` com opacidade controlada (`opacity-30`) e desfoque nativo atrás do gradiente de partículas flutuantes.
-
-### 🔮 Componente Sobre (`components/About.js`)
-* **Modificação:** Substituição do layout 100% simétrico por um layout de duas colunas:
-  * **Esquerda:** Biografia detalhada com tipografia Playfair Display e botões de chamada rápida para ação, acompanhada da nova imagem casual de estúdio `about-photo.jpg`.
-  * **Direita:** Grid assíncrono exibindo os 4 cards de identidade (Dubladora, Cantora, Maga e Criadora), realçando os efeitos de hover glow de forma elegante.
-
-### 📱 Componente Canais (`components/Channels.js`)
-* **Modificação:** Otimização dos cards de canais. Em vez de emojis brutos, os cards passarão a usar imagens reais em miniaturas vibrantes correspondentes de forma semi-transparente como backgrounds do card, ou ícones desenhados com filtros e layouts modernos de acrílico (glassmorphism).
-
-### 🎵 Componente Música (`components/Music.js`)
-* **Modificação:** Apontar a capa do álbum para a imagem real `album-cover.jpg`, eliminando o erro de 404, e ajustar a sombra de projeção do álbum para acompanhar as cores cósmicas da arte.
-
-### 📖 Componente Livro (`components/Book.js`)
-* **Modificação:** Integrar a capa real do livro (`book-cover.jpg`) no card 3D rotativo, mantendo o efeito físico tridimensional de profundidade na rotação e agregando um valor visual espetacular para o produto físico da Pracy.
+1. **Contenção Rígida de Imagens:** Nenhuma imagem do site poderá se expandir livremente. Definiremos limites máximos rígidos de altura e largura (`max-h-[...]`, `max-w-[...]`) com `object-cover` e centralização para garantir elegância e consistência em qualquer tamanho de monitor.
+2. **Eliminação de Poluição Visual:** Removeremos backgrounds barulhentos que brigam com as fotos. Usaremos fundos escuros puros e sofisticados (`#09090f` ou `#0b0a13`) com gradientes radiais ultra-suaves de neon como pontos de luz discretos no fundo.
+3. **Tipografia e Espaçamentos Nobres:** Acentos neon discretos, tipografia refinada e espaçamentos equilibrados que garantem descanso visual e legibilidade premium.
+4. **Resolução de Bugs de Layout:** Mapeamento estrito de classes nativas do Tailwind CSS e estilos inline de salvaguarda nos SVGs para assegurar que nenhum ícone ou seta sofra deformações.
 
 ---
 
-## 🧪 Plano de Verificação
+## 🛠️ Detalhamento das Alterações por Componente
 
-### Testes Manuais
-1. **Resolução de Erros:** Executar o build do Next.js localmente e verificar na aba Network do navegador se todos os assets carregam com status `200 OK` (0 ocorrências de 404).
-2. **Design Responsivo:** Testar o layout nos modos mobile (iPhone 12/13/14 Pro - 390px), tablet (iPad Air - 820px) e desktop (FullHD - 1920px), avaliando quebras de layout ou sobreposição de textos.
-3. **Fluidez:** Validar se a rotação 3D do livro e as partículas do Hero estão rodando com suavidade a 60 FPS sem gargalos de CPU.
+### 🌟 Hero Section (`components/Hero.js`)
+* **Background:** Fundo escuro limpo (#09090f) sem imagens de textura barulhenta. Um leve e sutil brilho radial de roxo profundo de fundo para atmosfera.
+* **Retrato da Pracy:** Reduzir o tamanho para `w-40 h-40` ou `w-44 h-44` (máximo de 176px). Remover o gradiente de arco-íris gigante e usar uma borda fina dourada ou roxa neon discreta.
+* **Badges de Identidades:** Organizar em uma linha única e elegante ("Dubladora • Cantora • Maga • Criadora") sem fundos de cores chamativas empilhadas que brigam entre si.
+* **Redes Sociais:** Dispostas em pequenos círculos minimalistas cinzas translúcidos com hover neon sutil.
+
+### 🔮 Seção Sobre (`components/About.js`)
+* **Layout:** Grid de duas colunas muito bem equilibradas:
+  * **Esquerda (Biografia):** Tipografia limpa, biografia bem-diagramada em fonte legível com espaçamento nobre.
+  * **Direita (Foto Casual e Cards):** A imagem `about-photo.png` será compacta e contida (tamanho máximo fixo de `max-h-[320px]` e `w-[240px]`), centralizada ao lado de um grid de cards de identidade limpos.
+* **Cards de Identidade:** Grid minimalista de 2x2. Cada card será um box discreto com fundo escuro semi-transparente (`bg-white/[0.02]`), borda muito fina de `border-white/10`, ícones neon coloridos e descrições curtas e discretas.
+
+### 📱 Seção Canais (`components/Channels.js`)
+* **SVG de Seta:** Ajustado para as classes nativas e válidas `w-4 h-4` com estilo inline explícito `style={{ width: '16px', height: '16px' }}` garantindo tamanho sob controle absoluto em qualquer navegador.
+* **Visual dos Cards:** Reduzidos para caixas compactas e modernas com glassmorphism fosco suave, emojis contidos (`w-12 h-12`) e rodapé limpo.
+
+### 🎵 Seção Música (`components/Music.js`)
+* **Capa do Álbum:** Limitada a um tamanho máximo fixo de `w-48 h-48` com cantos arredondados discretos e sombra fosca simples.
+* **Player do Spotify:** Centralizado com o conteúdo em layout limpo horizontal.
+
+### 📖 Seção Livro (`components/Book.js`)
+* **Capa do Livro:** Redimensionada para um modelo tridimensional contido e elegante de `w-40 h-56` (proporção clássica de livro de mesa), sem expandir desproporcionalmente.

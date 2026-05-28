@@ -44,13 +44,13 @@ export default function Music() {
           </div>
 
           <div className="relative z-10 flex flex-col md:flex-row items-center gap-10">
-            <div className="w-64 h-64 flex-shrink-0 relative group">
+            <div className="w-48 h-48 md:w-56 md:h-56 flex-shrink-0 relative group">
               {/* Sombra de Projeção Cósmica Ampliada */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary via-indigo-500 to-secondary rounded-2xl blur-2xl opacity-75 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500 animate-pulse-glow"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-primary via-indigo-500 to-secondary rounded-2xl blur-xl opacity-50 group-hover:opacity-75 group-hover:scale-105 transition-all duration-500"></div>
               <img 
                 src="/images/placeholders/album-cover.png" 
                 alt="Capa do Álbum Transcendental" 
-                className="relative w-full h-full object-cover rounded-2xl shadow-2xl border border-white/20 transform group-hover:scale-103 transition-transform duration-500"
+                className="relative w-full h-full object-cover rounded-2xl shadow-xl border border-white/10"
               />
             </div>
 

@@ -82,86 +82,88 @@ export default function About() {
   ]
 
   return (
-    <section id="about" className="relative py-32 px-4 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-dark via-primary/5 to-dark"></div>
-      
-      <div className="relative max-w-7xl mx-auto">
+    <section id="about" className="relative py-24 px-6 bg-[#0a0910] overflow-hidden">
+      <div className="relative max-w-6xl mx-auto">
+        
+        {/* Título de Seção Minimalista */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-24"
+          className="text-center mb-20"
         >
-          <h2 className="text-6xl md:text-7xl font-display font-bold mb-6 gradient-text">
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 text-white">
             Quem sou eu
           </h2>
-          <p className="text-xl md:text-2xl text-white/70 max-w-3xl mx-auto leading-relaxed">
-            Sou um <span className="gradient-text font-bold">unicórnio colorido</span> — multifacetada, criativa e mágica. 
-            Cada projeto é uma nova aventura no meu universo vibrante.
+          <div className="w-12 h-[2px] bg-primary mx-auto mb-4"></div>
+          <p className="text-base md:text-lg text-white/50 max-w-2xl mx-auto">
+            Uma mente criativa e multifacetada unindo arte e espiritualidade
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-          {/* Biografia e Foto Premium (Esquerda) */}
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 mb-20">
+          {/* Foto Casual Compacta e Controlada (Esquerda) */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="lg:col-span-5 space-y-8"
+            className="flex-shrink-0 w-64 h-80 relative group"
           >
-            <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-accent rounded-3xl blur-2xl opacity-40 group-hover:opacity-60 transition-opacity duration-500"></div>
-              <div className="relative rounded-3xl bg-gradient-to-br from-primary/30 to-secondary/30 p-[2px] shadow-2xl overflow-hidden">
-                <img 
-                  src="/images/placeholders/about-photo.png" 
-                  alt="Pracy em seu estúdio" 
-                  className="w-full h-auto object-cover rounded-3xl transform hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-            </div>
-            
-            <div className="p-8 rounded-3xl bg-dark/40 border border-white/5 backdrop-blur-sm">
-              <p className="text-lg text-white/80 leading-relaxed mb-6">
-                Minha jornada é impulsionada pela paixão de criar mundos através da voz, da música e do mistério. Como dubladora, dou vida a personagens únicos; como cantora, conecto almas através da música; e como maga e criadora, espalho encantamento e autoconhecimento.
-              </p>
-              <p className="text-lg text-white/60 leading-relaxed">
-                Bem-vindo ao meu hub dinâmico, um espaço onde a arte encontra a espiritualidade e a criatividade não tem limites! ✨
-              </p>
+            {/* Brilho neon suave atrás */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-primary to-secondary rounded-2xl blur-xl opacity-30 group-hover:opacity-40 transition-opacity duration-300"></div>
+            <div className="relative w-full h-full rounded-2xl p-[1px] bg-gradient-to-tr from-primary/30 to-secondary/30 overflow-hidden shadow-xl">
+              <img 
+                src="/images/placeholders/about-photo.png" 
+                alt="Pracy em seu estúdio" 
+                className="w-full h-full object-cover rounded-2xl"
+              />
             </div>
           </motion.div>
 
-          {/* Cards de Identidade Grid 2x2 (Direita) */}
-          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-8">
-            {identities.map((identity, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: idx * 0.15 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -10, scale: 1.02 }}
-                className="group relative"
-              >
-                <div className={`absolute inset-0 bg-gradient-to-br ${identity.gradient} rounded-3xl blur-xl opacity-30 group-hover:opacity-60 transition-opacity duration-300`}></div>
-                
-                <div className="relative p-8 rounded-3xl bg-dark/80 backdrop-blur-sm border border-white/10 hover:border-white/30 transition-all duration-300 h-full flex flex-col">
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${identity.gradient} flex items-center justify-center mb-6 ${identity.glow} group-hover:scale-110 transition-transform duration-300`}>
-                    <identity.icon className="w-8 h-8 text-white" />
-                  </div>
-                  
-                  <h3 className="text-2xl font-display font-bold mb-3 text-white group-hover:gradient-text transition-all duration-300">
-                    {identity.title}
-                  </h3>
-                  
-                  <p className="text-white/70 leading-relaxed text-base">
-                    {identity.desc}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+          {/* Biografia Detalhada e Polida (Direita) */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="flex-grow max-w-2xl text-center lg:text-left space-y-6"
+          >
+            <p className="text-lg text-white/80 leading-relaxed font-sans">
+              Sou um <span className="text-primary font-semibold">unicórnio colorido</span> — multifacetada, criativa e mágica. Minha jornada é impulsionada pela paixão de criar mundos através da voz, da música e do mistério.
+            </p>
+            <p className="text-base text-white/60 leading-relaxed font-sans">
+              Como dubladora, dou vida a personagens únicos; como cantora, conecto almas através da música; e como maga e criadora, espalho encantamento e autoconhecimento. Bem-vindo ao meu hub dinâmico, um espaço onde a arte encontra a espiritualidade e a criatividade não tem limites! ✨
+            </p>
+          </motion.div>
+        </div>
+
+        {/* Cards de Identidade Compactos */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center">
+          {identities.map((identity, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: idx * 0.08 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -4 }}
+              className="w-full max-w-[280px] p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-white/10 hover:bg-white/[0.04] transition-all duration-300 flex flex-col items-start"
+            >
+              <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${identity.gradient} flex items-center justify-center mb-6 shadow-md`}>
+                <identity.icon className="w-6 h-6 text-white" />
+              </div>
+              
+              <h3 className="text-xl font-bold mb-2 text-white">
+                {identity.title}
+              </h3>
+              
+              <p className="text-sm text-white/50 leading-relaxed">
+                {identity.desc}
+              </p>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

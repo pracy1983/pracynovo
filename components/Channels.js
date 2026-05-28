@@ -26,15 +26,15 @@ export default function Channels() {
       type: 'YouTube',
       icon: PlayIcon,
       href: 'https://youtube.com/@magiacompracy',
-      gradient: 'from-primary to-indigo',
-      emoji: '🎩',
+      color: '#7C3AED',
+      emoji: '🔮',
     },
     {
       title: 'Pracy in Wonderland',
       type: 'YouTube',
       icon: PlayIcon,
       href: 'https://youtube.com/@pracyinwonderland',
-      gradient: 'from-secondary to-pink-600',
+      color: '#EC4899',
       emoji: '🐰',
     },
     {
@@ -42,7 +42,7 @@ export default function Channels() {
       type: 'YouTube',
       icon: PlayIcon,
       href: 'https://youtube.com/@meditacoesguiadas',
-      gradient: 'from-emerald to-green-600',
+      color: '#10B981',
       emoji: '🧘‍♀️',
     },
     {
@@ -50,7 +50,7 @@ export default function Channels() {
       type: 'Podcast',
       icon: Music2Icon,
       href: 'https://open.spotify.com/show/misticast',
-      gradient: 'from-accent to-orange-600',
+      color: '#F97316',
       emoji: '🎙️',
     },
     {
@@ -58,7 +58,7 @@ export default function Channels() {
       type: 'Instagram',
       icon: PlayIcon,
       href: 'https://instagram.com/aprendamagia',
-      gradient: 'from-gold to-yellow-600',
+      color: '#FBBF24',
       emoji: '✨',
     },
     {
@@ -66,7 +66,7 @@ export default function Channels() {
       type: 'Instagram',
       icon: PlayIcon,
       href: 'https://instagram.com/pracy',
-      gradient: 'from-cyan to-blue-600',
+      color: '#06B6D4',
       emoji: '💫',
     },
     {
@@ -74,94 +74,91 @@ export default function Channels() {
       type: 'Instagram',
       icon: PlayIcon,
       href: 'https://instagram.com/misticastbr',
-      gradient: 'from-indigo to-purple-600',
-      emoji: '🔮',
+      color: '#4F46E5',
+      emoji: '🧿',
     },
     {
       title: '@magiacompracy',
       type: 'TikTok',
       icon: PlayIcon,
       href: 'https://tiktok.com/@magiacompracy',
-      gradient: 'from-pink-600 to-purple-600',
+      color: '#D946EF',
       emoji: '🎭',
     },
   ]
 
   return (
-    <section className="relative py-32 px-4 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-dark via-secondary/5 to-dark"></div>
-
-      <div className="relative max-w-7xl mx-auto">
+    <section className="relative py-24 px-6 bg-[#08070d] overflow-hidden">
+      <div className="relative max-w-6xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-20"
+          className="text-center mb-16"
         >
-          <h2 className="text-6xl md:text-7xl font-display font-bold mb-6 gradient-text">
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 tracking-tight text-white">
             Meus Canais
           </h2>
-          <p className="text-xl md:text-2xl text-white/70 max-w-3xl mx-auto">
-            Explore meu universo em diferentes plataformas
+          <div className="w-12 h-[2px] bg-primary mx-auto mb-4"></div>
+          <p className="text-base md:text-lg text-white/50 max-w-2xl mx-auto">
+            Acompanhe meus conteúdos diários em diferentes plataformas
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {channels.map((channel, idx) => (
             <motion.a
               key={idx}
               href={channel.href}
               target="_blank"
               rel="noopener noreferrer"
-              initial={{ opacity: 0, scale: 0.85 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: idx * 0.06 }}
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: idx * 0.04 }}
               viewport={{ once: true }}
-              whileHover={{ y: -10, scale: 1.03 }}
-              className="group relative block"
+              whileHover={{ y: -4 }}
+              className="group relative block p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-white/10 hover:bg-white/[0.04] transition-all duration-300 overflow-hidden"
             >
-              {/* Glow Dinâmico Traseiro */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${channel.gradient} rounded-3xl blur-2xl opacity-25 group-hover:opacity-60 transition-opacity duration-300`}></div>
-              
-              {/* Estrutura do Card em Glassmorphism */}
-              <div className="relative h-full p-8 rounded-3xl bg-dark/70 backdrop-blur-md border border-white/5 group-hover:border-white/20 transition-all duration-300 flex flex-col items-center justify-between text-center overflow-hidden">
-                {/* Elemento de Brilho de Canto */}
-                <div className={`absolute top-0 right-0 w-24 h-24 bg-gradient-to-br ${channel.gradient} opacity-10 group-hover:opacity-30 blur-2xl transition-opacity duration-300`}></div>
-                
-                {/* Cabeçalho do Card com Emoji + Badge da Rede */}
-                <div className="w-full flex items-center justify-between mb-8 z-10">
-                  <span className="px-3 py-1 text-xs font-bold tracking-widest uppercase rounded-full bg-white/5 border border-white/10 text-white/60 group-hover:text-white transition-colors duration-300">
-                    {channel.type}
-                  </span>
-                  <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${channel.gradient} p-[1px] flex items-center justify-center`}>
-                    <div className="w-full h-full rounded-xl bg-dark/80 flex items-center justify-center">
-                      <channel.icon className="w-4 h-4 text-white/80 group-hover:text-white" />
-                    </div>
-                  </div>
-                </div>
+              {/* Indicador de cor discreto na lateral */}
+              <div 
+                className="absolute top-0 left-0 w-[3px] h-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"
+                style={{ backgroundColor: channel.color }}
+              ></div>
 
-                {/* Conteúdo Central */}
-                <div className="flex flex-col items-center z-10 py-4 flex-grow justify-center">
-                  <div className="w-20 h-20 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-4xl mb-6 shadow-inner group-hover:scale-110 group-hover:bg-white/10 transition-all duration-500">
+              <div className="flex flex-col h-full justify-between items-start">
+                <div className="w-full flex items-center justify-between mb-6">
+                  <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-2xl group-hover:scale-105 transition-transform duration-300">
                     {channel.emoji}
                   </div>
-                  
-                  <h3 className="text-2xl font-display font-bold text-white group-hover:gradient-text transition-all duration-300">
+                  <span className="text-[10px] uppercase tracking-widest font-bold text-white/40 group-hover:text-white/70 transition-colors duration-300">
+                    {channel.type}
+                  </span>
+                </div>
+
+                <div className="mb-6">
+                  <h3 className="text-lg font-bold text-white/95 group-hover:text-white transition-colors duration-300 line-clamp-1">
                     {channel.title}
                   </h3>
                 </div>
 
-                {/* Rodapé / Barra de Ação */}
-                <div className="w-full mt-6 pt-4 border-t border-white/5 z-10 flex items-center justify-center gap-2 text-sm text-white/40 group-hover:text-white/80 transition-colors duration-300">
-                  <span>Acessar canal</span>
-                  <svg className="w-4.5 h-4.5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                <div className="w-full flex items-center justify-between text-xs text-white/30 group-hover:text-white/60 transition-colors duration-300 pt-2 border-t border-white/[0.03]">
+                  <span>Acessar</span>
+                  <svg 
+                    className="transform group-hover:translate-x-1 transition-transform duration-300 text-white/40 group-hover:text-white"
+                    width="14" 
+                    height="14" 
+                    viewBox="0 0 24 24" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    strokeWidth="3" 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round"
+                    style={{ width: '14px', height: '14px', minWidth: '14px', minHeight: '14px' }}
+                  >
+                    <polyline points="9 18 15 12 9 6" />
                   </svg>
                 </div>
-
-                {/* Borda Inferior Iluminada */}
-                <div className={`absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r ${channel.gradient} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300`}></div>
               </div>
             </motion.a>
           ))}

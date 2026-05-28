@@ -42,24 +42,24 @@ export default function Book() {
           className="grid md:grid-cols-2 gap-16 items-center"
         >
           <div className="relative flex justify-center">
-            <div className="absolute inset-0 bg-gradient-to-br from-gold to-accent rounded-3xl blur-3xl opacity-30 animate-pulse-glow"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-gold to-accent rounded-3xl blur-2xl opacity-20"></div>
             <motion.div
-              whileHover={{ rotateY: 20, rotateX: -12, scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 200, damping: 20 }}
-              className="relative w-72 h-[420px] rounded-r-2xl shadow-[15px_15px_30px_rgba(0,0,0,0.5)] border-y border-r border-white/20 cursor-pointer overflow-hidden flex"
+              whileHover={{ rotateY: 18, rotateX: -10, scale: 1.03 }}
+              transition={{ type: "spring", stiffness: 180, damping: 18 }}
+              className="relative w-52 h-[300px] rounded-r-xl shadow-[10px_10px_20px_rgba(0,0,0,0.4)] border-y border-r border-white/15 cursor-pointer overflow-hidden flex"
               style={{ 
                 transformStyle: 'preserve-3d', 
-                perspective: '1200px',
+                perspective: '1000px',
                 transformOrigin: 'left center' 
               }}
             >
               {/* Lombada Simulada do Livro */}
-              <div className="w-4 h-full bg-gradient-to-r from-yellow-700 via-yellow-600 to-yellow-800 border-r border-white/10 z-20 flex-shrink-0"></div>
+              <div className="w-3 h-full bg-gradient-to-r from-yellow-700 via-yellow-600 to-yellow-800 border-r border-white/10 z-20 flex-shrink-0"></div>
               
               {/* Capa Principal com Imagem Premium */}
               <div className="relative flex-grow h-full bg-dark">
                 {/* Overlay de Brilho */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-black/50 via-transparent to-white/10 z-10 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-tr from-black/40 via-transparent to-white/10 z-10 pointer-events-none"></div>
                 <img 
                   src="/images/placeholders/book-cover.png" 
                   alt="Capa do Livro Na Descoberta de Mim" 

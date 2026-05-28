@@ -1,46 +1,37 @@
-# Backlog de Tarefas - Redesenho Pracy Hub Místico
+# Backlog de Tarefas - Redesenho Minimalista e Moderno
 
-Este documento serve para organizar e rastrear o progresso de cada tarefa necessária para a execução do redesenho completo do site da Pracy.
+Este documento serve para organizar e rastrear o progresso do redesenho minimalista de padrão internacional, corrigindo as deformações e imagens superdimensionadas.
 
 ---
 
-## 🚀 Checklist Geral do Redesenho
+## 🚀 Checklist de Correção e Polimento Visual
 
-### 📂 Fase 1: Geração de Assets & Resolução de 404s
-- [x] Criar diretórios de imagens `public/images` e `public/images/placeholders` se não existirem
-- [x] Gerar imagem premium `pracy-portrait.jpg` (Retrato profissional com aura mística) via IA (Salvo como PNG)
-- [x] Gerar imagem premium `hero-background.jpg` (Fundo cósmico com orbes luminosas e desfoques) via IA (Salvo como PNG)
-- [x] Gerar imagem premium `about-photo.jpg` (Foto casual sorrindo em estúdio com neon arco-íris) via IA (Salvo como PNG)
-- [x] Gerar imagem premium `album-cover.jpg` (Capa do álbum musical Transcendental) via IA (Salvo como PNG)
-- [x] Gerar imagem premium `book-cover.jpg` (Capa tridimensional do livro Na Descoberta de Mim) via IA (Salvo como PNG)
+### 🐛 Fase 1: Correção Imediata de Bugs de Dimensionamento (RCA)
+- [ ] Corrigir o bug da seta azul gigante em `Channels.js` (Mapear largura e altura fixas com `w-4 h-4` e estilos inline de segurança)
+- [ ] Ajustar as proporções e dimensões das imagens no Hero e no About para conter seu tamanho de exibição nativo
+- [ ] Remover backgrounds complexos barulhentos que interferem na legibilidade
 
-### 🌟 Fase 2: Redesenho do Hero Section
-- [x] Atualizar `Hero.js` para usar as imagens reais `pracy-portrait.png` e `hero-background.png`
-- [x] Substituir o emoji `🦄` pela imagem real do retrato de forma responsiva
-- [x] Refinar o gradiente rotativo ao redor do avatar para um efeito glow dinâmico de altíssimo nível
-- [x] Otimizar os tempos de transição do Framer Motion e o número de partículas geradas no client-side
+### 🌟 Fase 2: Redesenho Moderno do Hero Section
+- [ ] Atualizar `Hero.js` para um layout limpo com fundo escuro elegante (#09090f) e brilho radial suave de atmosfera
+- [ ] Reduzir o avatar de Pracy para `w-44 h-44` (176px) com borda fina e glow sutil, sem elementos de arco-íris gigantizados
+- [ ] Simplificar os badges das facetas profissionais para uma linha única ("Dubladora • Cantora • Maga • Criadora") com tipografia refinada e clean
+- [ ] Espaçar adequadamente os elementos verticais para evitar sobreposição de menus ou botões em telas pequenas
 
-### 🔮 Fase 3: Redesenho da Seção Sobre (Quem Sou Eu)
-- [x] Atualizar `About.js` para layout de duas colunas (Desktop) e empilhado (Mobile)
-- [x] Incorporar a imagem `about-photo.png` ao lado da biografia profissional
-- [x] Ajustar espaçamento, sombras e glows coloridos nos 4 cards de identidade ao hover
-- [x] Otimizar tamanho de tipografia Playfair Display e legibilidade das descrições
+### 🔮 Fase 3: Redesenho Minimalista da Seção Sobre (Quem Sou Eu)
+- [ ] Atualizar `About.js` para um layout de 2 colunas equilibrado
+- [ ] Limitar a exibição da foto casual `about-photo.png` para dimensões máximas rígidas (`max-w-[280px]` e `max-h-[360px]`), com cantos arredondados e sombra sutil
+- [ ] Redesenhar os cards de identidade para caixas compactas e translúcidas (`bg-white/[0.02]`) com ícones neon discretos e bordas ultra-finas
 
-### 📱 Fase 4: Redesenho da Seção Canais
-- [x] Atualizar `Channels.js` para modernizar o visual dos cards (Visual de glassmorphism transparente)
-- [x] Substituir os emojis brutos por ícones customizados, gradientes integrados de alta densidade e acentos de cor sutis
+### 📱 Fase 4: Redesenho e Clean-up dos Canais
+- [ ] Simplificar os cards de `Channels.js` para um visual minimalista de glassmorphism fosco suave e compactado
+- [ ] Garantir que todos os SVGs tenham tamanhos fixados rigidamente
+- [ ] Otimizar o espaçamento interno (paddings) e as sombras
 
-### 🎵 Fase 5: Redesenho da Seção Música
-- [x] Atualizar `Music.js` alterando o caminho do placeholder para `/images/placeholders/album-cover.png`
-- [x] Ajustar o contorno e sombra de dispersão da capa para combinar com os tons místico-cósmicos da nova capa gerada
-- [x] Verificar a integração e funcionamento do player Spotify embed
+### 🎵 Fase 5: Ajustes de Proporção nas Seções de Música & Livro
+- [ ] Conter o tamanho da capa do álbum Transcendental em `Music.js` a no máximo `w-48 h-48` no desktop
+- [ ] Conter a representação 3D do livro em `Book.js` a no máximo `w-44 h-60` com lombada estilizada e efeito tridimensional controlado
 
-### 📖 Fase 6: Redesenho da Seção Livro
-- [x] Atualizar `Book.js` integrando a capa real `book-cover.png` no card com profundidade 3D
-- [x] Polir os ângulos de rotação do efeito perspectiva ao hover
-
-### 🛠️ Fase 7: Revisão, Performance & Testes
-- [x] Rodar o servidor de desenvolvimento `npm run dev` localmente
-- [x] Verificar a aba Network para garantir 0 ocorrências de erros 404
-- [x] Testar responsividade móvel em telas pequenas e tablets
-- [x] Fazer commit final no Git e publicar as mudanças na ramificação atual
+### 🛠️ Fase 6: Validação de Layout, Responsividade & Deploy
+- [ ] Rodar o servidor de desenvolvimento Next.js
+- [ ] Validar o layout no navegador para garantir 0 ocorrências de deformações ou imagens gigantes
+- [ ] Realizar commit final das correções e efetuar push para o GitHub

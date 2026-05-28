@@ -69,132 +69,119 @@ export default function Hero() {
   }, [])
 
   const socialLinks = [
-    { icon: InstagramIcon, href: 'https://instagram.com/pracy', label: 'Instagram', color: 'hover:text-pink-500' },
-    { icon: PlayIcon, href: 'https://youtube.com/@magiacompracy', label: 'YouTube', color: 'hover:text-red-500' },
-    { icon: MusicIcon, href: 'https://open.spotify.com/artist/pracy', label: 'Spotify', color: 'hover:text-green-500' },
-    { icon: SendIcon, href: 'https://t.me/magiacompracy', label: 'Telegram', color: 'hover:text-cyan-500' },
+    { icon: InstagramIcon, href: 'https://instagram.com/pracy', label: 'Instagram', color: 'hover:text-pink-500 hover:border-pink-500/30' },
+    { icon: PlayIcon, href: 'https://youtube.com/@magiacompracy', label: 'YouTube', color: 'hover:text-red-500 hover:border-red-500/30' },
+    { icon: MusicIcon, href: 'https://open.spotify.com/artist/pracy', label: 'Spotify', color: 'hover:text-green-500 hover:border-green-500/30' },
+    { icon: SendIcon, href: 'https://t.me/magiacompracy', label: 'Telegram', color: 'hover:text-cyan-500 hover:border-cyan-500/30' },
   ]
 
-  const particles = Array.from({ length: 20 }, (_, i) => ({
+  const particles = Array.from({ length: 15 }, (_, i) => ({
     id: i,
-    delay: i * 0.2,
-    color: ['bg-primary', 'bg-secondary', 'bg-accent', 'bg-gold', 'bg-emerald', 'bg-cyan'][i % 6]
+    delay: i * 0.3,
+    color: ['bg-primary', 'bg-secondary', 'bg-accent', 'bg-gold'][i % 4]
   }))
 
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Imagem de Fundo Premium e Máscaras de Gradiente */}
-      <div className="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-lighten pointer-events-none" style={{ backgroundImage: "url('/images/placeholders/hero-background.png')" }}></div>
-      <div className="absolute inset-0 bg-gradient-to-b from-dark/40 via-dark/90 to-dark"></div>
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 animate-pulse-glow opacity-75"></div>
-      
-      <div className="absolute inset-0 overflow-hidden">
-        <motion.div
-          animate={{
-            background: [
-              'radial-gradient(circle at 20% 50%, rgba(124, 58, 237, 0.35) 0%, transparent 50%)',
-              'radial-gradient(circle at 80% 50%, rgba(236, 72, 153, 0.35) 0%, transparent 50%)',
-              'radial-gradient(circle at 50% 80%, rgba(249, 115, 22, 0.35) 0%, transparent 50%)',
-              'radial-gradient(circle at 20% 50%, rgba(124, 58, 237, 0.35) 0%, transparent 50%)',
-            ]
-          }}
-          transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
-          className="absolute inset-0"
-        />
-      </div>
+    <section className="relative w-full min-h-[90vh] md:min-h-screen py-16 md:py-24 flex flex-col items-center justify-center overflow-hidden bg-[#09080f]">
+      {/* Luz radial de atmosfera de fundo */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(124,58,237,0.12)_0%,transparent_65%)] pointer-events-none"></div>
 
       {mounted && particles.map(particle => (
         <Particle key={particle.id} delay={particle.delay} color={particle.color} />
       ))}
 
-      <div className="relative z-10 text-center px-4 max-w-5xl mx-auto py-20">
+      <div className="relative z-10 text-center px-6 max-w-3xl mx-auto flex flex-col items-center justify-center">
+        {/* Avatar Compacto e Elegante */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
+          initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, type: "spring" }}
-          className="mb-12"
+          transition={{ duration: 0.8, type: "spring" }}
+          className="mb-8"
         >
-          <div className="relative w-60 h-60 mx-auto mb-8">
-            <div className="absolute inset-0 gradient-rainbow rounded-full blur-2xl opacity-75 animate-pulse"></div>
-            <div className="relative w-full h-full rounded-full bg-gradient-to-br from-primary via-secondary to-accent p-[3px] shadow-2xl animate-glow overflow-hidden">
-              <div className="w-full h-full rounded-full bg-dark/90 overflow-hidden flex items-center justify-center border-4 border-white/10">
+          <div className="relative w-36 h-36 md:w-44 md:h-44">
+            {/* Brilho neon suave de contorno */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-primary to-secondary rounded-full blur-xl opacity-40"></div>
+            <div className="relative w-full h-full rounded-full p-[2px] bg-gradient-to-tr from-primary via-secondary to-accent shadow-xl overflow-hidden">
+              <div className="w-full h-full rounded-full bg-dark overflow-hidden flex items-center justify-center">
                 <img 
                   src="/images/placeholders/pracy-portrait.png" 
                   alt="Retrato de Pracy" 
-                  className="w-full h-full object-cover rounded-full transform hover:scale-110 transition-transform duration-500" 
+                  className="w-full h-full object-cover rounded-full" 
                 />
               </div>
             </div>
           </div>
         </motion.div>
 
+        {/* Título de Destaque */}
         <motion.h1
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="text-7xl md:text-9xl font-display font-bold mb-6 gradient-text"
-          style={{ lineHeight: '1.1' }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-5xl md:text-7xl font-display font-bold mb-4 tracking-tight text-white"
         >
           PRACY
         </motion.h1>
 
+        {/* Linha Única de Badges Minimalistas */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="flex flex-wrap justify-center gap-3 mb-12 text-lg md:text-xl font-semibold"
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="flex flex-wrap justify-center items-center gap-x-3 gap-y-2 mb-10 text-xs md:text-sm font-medium text-white/50 tracking-widest uppercase"
         >
-          <span className="px-4 py-2 bg-primary/30 rounded-full border border-primary/50 backdrop-blur-sm">Dubladora</span>
-          <span className="px-4 py-2 bg-secondary/30 rounded-full border border-secondary/50 backdrop-blur-sm">Cantora</span>
-          <span className="px-4 py-2 bg-accent/30 rounded-full border border-accent/50 backdrop-blur-sm">Maga</span>
-          <span className="px-4 py-2 bg-cyan/30 rounded-full border border-cyan/50 backdrop-blur-sm">Criadora</span>
+          <span>Dubladora</span>
+          <span className="text-white/20">•</span>
+          <span>Cantora</span>
+          <span className="text-white/20">•</span>
+          <span>Maga</span>
+          <span className="text-white/20">•</span>
+          <span>Criadora</span>
         </motion.div>
 
-        <motion.button
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.7 }}
-          onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-          className="px-10 py-4 gradient-rainbow rounded-full text-white text-lg font-bold shadow-2xl hover:scale-105 transition-transform duration-300 mb-16"
-        >
-          Explore meu universo ✨
-        </motion.button>
-
+        {/* CTAs Compactos e Discretos */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.9 }}
-          className="flex justify-center gap-6"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="flex flex-col sm:flex-row items-center gap-4 mb-12"
         >
-          {socialLinks.map((social, idx) => (
-            <motion.a
-              key={idx}
-              href={social.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.2, rotate: 5 }}
-              whileTap={{ scale: 0.9 }}
-              className={`p-4 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 transition-all duration-300 ${social.color}`}
-              aria-label={social.label}
-            >
-              <social.icon className="w-7 h-7" />
-            </motion.a>
-          ))}
+          <button
+            onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+            className="px-8 py-3 bg-white text-dark hover:bg-white/90 rounded-full font-bold text-sm shadow-md transition-all duration-300 transform hover:scale-103"
+          >
+            Conhecer Trabalho ✨
+          </button>
+          
+          <div className="flex gap-3">
+            {socialLinks.map((social, idx) => (
+              <motion.a
+                key={idx}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                className={`p-3 rounded-full bg-white/5 border border-white/5 transition-all duration-300 text-white/50 hover:bg-white/10 ${social.color}`}
+                aria-label={social.label}
+              >
+                <social.icon className="w-5 h-5" />
+              </motion.a>
+            ))}
+          </div>
         </motion.div>
       </div>
 
+      {/* Seta de Scroll Suave Minimalista */}
       <motion.div
-        animate={{ y: [0, 15, 0] }}
+        animate={{ y: [0, 8, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-6 left-1/2 transform -translate-x-1/2 opacity-30 hidden md:block"
       >
-        <div className="w-8 h-12 border-2 border-white/30 rounded-full flex justify-center p-2">
-          <motion.div
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-            className="w-2 h-2 bg-white rounded-full"
-          />
-        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '20px', height: '20px' }}>
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <polyline points="19 12 12 19 5 12"></polyline>
+        </svg>
       </motion.div>
     </section>
   )
