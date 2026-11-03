@@ -17,13 +17,14 @@ p{margin:0 0 3.2mm}
 
 /* capa */
 .capa{background:radial-gradient(ellipse at 50% 62%,#fff4d6 0%,#f4dfae 22%,#3a2a16 62%,#140e08 100%);padding:0;color:#fff}
-.capa img{position:absolute;bottom:0;left:50%;transform:translateX(-50%);height:205mm;mix-blend-mode:multiply;filter:contrast(1.05)}
+.capa .uni{position:absolute;left:50%;top:57%;transform:translate(-50%,-50%);height:135mm;opacity:.9;filter:drop-shadow(0 0 6px #ffd98a) drop-shadow(0 0 22px rgba(255,200,110,.8))}
+.capa .maga{position:absolute;bottom:0;left:50%;transform:translateX(-50%);height:160mm;filter:drop-shadow(0 0 30px rgba(255,215,140,.55))}
 .capa .glow{position:absolute;left:50%;top:58%;width:120mm;height:120mm;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(255,240,200,.9),rgba(255,220,140,0) 60%)}
-.capa .t{position:absolute;top:20mm;width:100%;text-align:center}
+.capa .t{position:absolute;top:14mm;z-index:2;width:100%;text-align:center}
 .capa .t .pre{font-family:Lato;letter-spacing:.5em;font-size:10pt;color:#f1d79a}
 .capa .t h1{color:#fff3d2;font-size:44pt;line-height:1.05;margin:4mm 0;text-shadow:0 0 18px rgba(255,210,120,.6)}
 .capa .t .sub{font-family:'Cormorant Garamond';font-style:italic;font-size:17pt;color:#f5e4bc}
-.capa .bot{position:absolute;bottom:12mm;width:100%;text-align:center;font-family:Cinzel;letter-spacing:.3em;color:#f6e3b6;font-size:11pt;text-shadow:0 1px 6px #000}
+.capa .bot{z-index:2;position:absolute;bottom:0;padding:14mm 0 9mm;background:linear-gradient(180deg,transparent,#140e08 70%);width:100%;text-align:center;font-family:Cinzel;letter-spacing:.3em;color:#f6e3b6;font-size:11pt;text-shadow:0 1px 6px #000}
 
 /* intro */
 .split{display:grid;grid-template-columns:1fr 62mm;gap:8mm;align-items:start}
@@ -61,17 +62,18 @@ p{margin:0 0 3.2mm}
 .egregora h3{color:#ffd98a;margin:0 0 2mm;font-size:15pt}
 .sente{display:flex;flex-wrap:wrap;gap:3mm;margin:3mm 0}
 .sente span{background:#fff;border:1px solid #ecdcb8;border-radius:20mm;padding:1.5mm 5mm;font-size:10pt}
-.cmp{background:#fff;border-radius:4mm;border:1px solid #ecdcb8;padding:4mm 5mm;margin-bottom:3.5mm}
+.cmp{background:#fff;border-radius:4mm;border:1px solid #ecdcb8;padding:3mm 5mm;margin-bottom:2.5mm;font-size:10.5pt}
 .no{color:#a03a2a;font-weight:700}.ok{color:#2f6b3a;font-weight:700}
-.assin{display:flex;align-items:center;gap:6mm;margin-top:8mm}
-.assin img{width:34mm;border-radius:50%;aspect-ratio:1;object-fit:cover;object-position:top;background:#fff;border:2px solid #d9bf85}
+.assin{display:flex;align-items:center;gap:6mm;margin-top:5mm}
+.assin img{width:28mm;border-radius:50%;aspect-ratio:1;object-fit:cover;object-position:top;background:#fff;border:2px solid #d9bf85}
 .assin .serif{font-size:18pt;font-style:italic;color:#6b4c18}
 </style></head><body>
 
 <!-- CAPA -->
 <section class="page capa">
   <div class="glow"></div>
-  <img src="capa.png" alt="">
+  <img class="uni" src="unicornio.png" alt="">
+  <img class="maga" src="pracy2.png" alt="">
   <div class="t">
     <div class="pre">RITUAL COLETIVO</div>
     <h1>RITUAL DA<br>PRIMEIRA LUZ</h1>
@@ -86,8 +88,8 @@ p{margin:0 0 3.2mm}
   <div class="gold-line"></div>
   <div class="split">
     <div>
-      <p>Olá! Eu sou a Pracy, maga hermetista e adepta da Goétia. Dou aula de magia online e atendo há anos. Você me encontra em <b>aprendamagia.com.br</b> e no Instagram <b>@magiacompracy</b>.</p>
-      <p>O Ritual da Primeira Luz é um dos rituais mais poderosos que já usei para desbloquear caminhos e cortar bloqueios profundos.</p>
+      <p>Olá! Eu sou a Pracy, maga unicorniana e adepta da Goétia. Dou aula de magia online e atendo há anos. Você me encontra em <b>magiacompracy.com.br</b> e no Instagram <b>@magiacompracy</b>.</p>
+      <p>O Ritual da Primeira Luz é um dos rituais mais poderosos que já usei para desbloquear caminhos e cortar bloqueios profundos. <b>Por que "primeira luz"?</b> Porque ele acontece em dois tempos: à noite você corta o que te prende, enquanto eu faço o ritual na egrégora ao mesmo tempo que você. Na manhã seguinte, você consolida o novo com a primeira luz do dia, o primeiro sol depois do corte.</p>
       <p>A primeira vez que fiz esse ritual foi quando meu mestre da época me viu rodando em círculos, sem nada do que eu queria funcionar. Era tudo bloqueado: karmas do passado e energia estagnada que me prendia no lugar.</p>
     </div>
     <img src="retrato.png" alt="Pracy">
@@ -110,15 +112,14 @@ p{margin:0 0 3.2mm}
     <div class="card"><b>Padrões de escassez</b>Ciclos que sempre te levam ao mesmo fim nos negócios.</div>
     <div class="card"><b>Padrões no amor</b>Relações tóxicas, sensação de nunca ser notada.</div>
     <div class="card"><b>Mediunidade bloqueada</b>Dificuldade de se conectar com guias e entender mensagens.</div>
-    <div class="card" style="grid-column:span 2"><b>Amarras e demandas</b>Amarras energéticas e kármicas, ou magias enviadas contra você.</div>
+    <div class="card" style="grid-column:span 2"><b>Amarras e demandas</b>Inveja, olho gordo, amarras energéticas e kármicas, ou magias enviadas contra você.</div>
   </div>
 
   <h2 style="margin-top:10mm"><small>COMO VAI SER</small>Os dois dias</h2>
   <div class="gold-line"></div>
   <div class="tl">
-    <div class="s"><div class="when">Segunda 9/11 · 10h</div><b>Encontro ao vivo comigo.</b> Eu explico como a magia funciona, por que o seu pedido não está chegando e como escrever o seu papel do jeito certo. O link chega pelo WhatsApp da Lil.ia.</div>
-    <div class="s"><div class="when">Segunda 9/11 · durante o dia</div>Dia limpo: sem álcool, drogas, sexo ou grandes agitações. Escreva o seu papel com calma.</div>
-    <div class="s"><div class="when">Segunda 9/11 · a partir da meia-noite</div><b>A vela.</b> Eu abro a egrégora Excitatio Lux à meia-noite e, à 1h, faço o ritual com o nome de todos os participantes. Ela fica aberta até a manhã seguinte, então não precisa ser no minuto exato.</div>
+    <div class="s"><div class="when">Segunda 9/11 · durante o dia</div><b>Preparação.</b> Dia limpo: sem álcool, drogas, sexo ou grandes agitações. Leia este guia com calma, separe o material e escreva o seu papel (anexo no fim).</div>
+    <div class="s"><div class="when">Segunda 9/11 · a partir da meia-noite</div><b>A vela.</b> Eu abro a egrégora Excitatio Lux à meia-noite e, à 1h, faço o ritual com o nome de todos os participantes: eu estou fazendo junto com você, no mesmo momento. Ela fica aberta até a manhã seguinte, então não precisa ser no minuto exato.</div>
     <div class="s"><div class="when">Terça 10/11 · nascer do sol</div><b>A consolidação na primeira luz do dia.</b></div>
   </div>
   <div class="foot"><span>RITUAL DA PRIMEIRA LUZ</span><span>03</span></div>
@@ -172,7 +173,7 @@ p{margin:0 0 3.2mm}
   <div class="cmp"><span class="no">✗</span> "Quero desbloquear minha vida financeira."<br><span class="ok">✓</span> "Removo os bloqueios que me impedem de ser promovida no trabalho."</div>
   <div class="cmp"><span class="no">✗</span> "Quero melhorar minha espiritualidade."<br><span class="ok">✓</span> "Desbloqueio minha mediunidade e ouço e interpreto mensagens espirituais com clareza."</div>
   <div class="cmp"><span class="no">✗</span> "Quero encontrar um amor."<br><span class="ok">✓</span> "Destruo os padrões que me fazem atrair relações rasas e sem compromisso."</div>
-  <div class="assin"><img src="pracy2.png" alt=""><div><div class="serif">Te vejo segunda às 10h.</div><div class="cinzel" style="font-size:12pt">— Pracy</div><small>Dúvidas? Fala com a Lil.ia no WhatsApp.</small></div></div>
+  <div class="assin"><img src="retrato.png" alt=""><div><div class="serif">Segunda à meia-noite, eu estou com você.</div><div class="cinzel" style="font-size:12pt">— Pracy</div><small>Dúvidas? Fala com a Lil.ia no WhatsApp.</small></div></div>
   <div class="foot"><span>RITUAL DA PRIMEIRA LUZ</span><span>06</span></div>
 </section>
 </body></html>
