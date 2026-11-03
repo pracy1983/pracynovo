@@ -82,7 +82,7 @@ export default function Hero() {
   }))
 
   return (
-    <section className="relative w-full min-h-[90vh] md:min-h-screen py-16 md:py-24 flex flex-col items-center justify-center overflow-hidden bg-[#09080f]">
+    <section className="relative w-full min-h-[90vh] md:min-h-screen py-16 md:py-24 flex flex-col items-center justify-center overflow-hidden bg-cover bg-center" style={{ backgroundImage: "url('/images/placeholders/hero-background.png')" }}>
       {/* Luz radial de atmosfera de fundo */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(124,58,237,0.12)_0%,transparent_65%)] pointer-events-none"></div>
 
@@ -98,7 +98,7 @@ export default function Hero() {
           transition={{ duration: 0.8, type: "spring" }}
           className="mb-8"
         >
-          <div className="relative w-36 h-36 md:w-44 md:h-44">
+          <div className="relative w-40 h-40 md:w-44 md:h-44">
             {/* Brilho neon suave de contorno */}
             <div className="absolute inset-0 bg-gradient-to-tr from-primary to-secondary rounded-full blur-xl opacity-40"></div>
             <div className="relative w-full h-full rounded-full p-[2px] bg-gradient-to-tr from-primary via-secondary to-accent shadow-xl overflow-hidden">
