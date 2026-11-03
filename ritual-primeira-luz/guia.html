@@ -1,85 +1,178 @@
 <!doctype html>
 <html lang="pt-BR"><head><meta charset="utf-8"><title>Ritual da Primeira Luz</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Lato:wght@400;700&display=swap" rel="stylesheet">
 <style>
-@page{size:A4;margin:18mm 18mm 20mm}
-body{font-family:Georgia,'Times New Roman',serif;color:#1c1712;font-size:12.5pt;line-height:1.55}
-h1{font-size:30pt;text-align:center;letter-spacing:.06em;margin:0 0 4px;color:#7a5410}
-.sub{text-align:center;font-style:italic;color:#6b5a44;margin-bottom:22px}
-h2{font-size:17pt;color:#7a5410;border-bottom:1px solid #d8c39a;padding-bottom:4px;margin-top:26px;page-break-after:avoid}
-.box{background:#faf4e6;border-left:4px solid #b8892e;padding:12px 16px;margin:14px 0}
-.agenda td{padding:6px 10px;vertical-align:top;border-bottom:1px solid #eadfc8}
-.agenda td:first-child{font-weight:bold;white-space:nowrap;color:#7a5410}
-table{border-collapse:collapse;width:100%}
-li{margin-bottom:6px}
-.sigilo{text-align:center;margin:10px 0}.sigilo img{width:150px}
-.no{color:#9b2c2c}.ok{color:#2f6b3a}
-.pg{page-break-before:always}
+@page{size:A4;margin:0}
+*{box-sizing:border-box}
+body{margin:0;font-family:Lato,sans-serif;color:#2a2118;font-size:11.5pt;line-height:1.6;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:210mm;height:297mm;position:relative;overflow:hidden;page-break-after:always;background:#fbf7ef;padding:20mm 20mm 18mm}
+.page:last-child{page-break-after:auto}
+h1,h2,h3,.cinzel{font-family:Cinzel,serif;font-weight:700;color:#8a6420;letter-spacing:.04em}
+h2{font-size:21pt;margin:0 0 4mm}
+h2 small{display:block;font-family:Lato;font-size:9pt;letter-spacing:.3em;color:#b8913f;font-weight:700;margin-bottom:2mm}
+.serif{font-family:'Cormorant Garamond',serif}
+p{margin:0 0 3.2mm}
+.gold-line{height:2px;background:linear-gradient(90deg,#b8913f,transparent);margin:3mm 0 6mm;width:60%}
+.foot{position:absolute;bottom:9mm;left:20mm;right:20mm;display:flex;justify-content:space-between;font-size:8pt;color:#a8916a;letter-spacing:.2em;font-family:Cinzel}
+
+/* capa */
+.capa{background:radial-gradient(ellipse at 50% 62%,#fff4d6 0%,#f4dfae 22%,#3a2a16 62%,#140e08 100%);padding:0;color:#fff}
+.capa img{position:absolute;bottom:0;left:50%;transform:translateX(-50%);height:205mm;mix-blend-mode:multiply;filter:contrast(1.05)}
+.capa .glow{position:absolute;left:50%;top:58%;width:120mm;height:120mm;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(255,240,200,.9),rgba(255,220,140,0) 60%)}
+.capa .t{position:absolute;top:20mm;width:100%;text-align:center}
+.capa .t .pre{font-family:Lato;letter-spacing:.5em;font-size:10pt;color:#f1d79a}
+.capa .t h1{color:#fff3d2;font-size:44pt;line-height:1.05;margin:4mm 0;text-shadow:0 0 18px rgba(255,210,120,.6)}
+.capa .t .sub{font-family:'Cormorant Garamond';font-style:italic;font-size:17pt;color:#f5e4bc}
+.capa .bot{position:absolute;bottom:12mm;width:100%;text-align:center;font-family:Cinzel;letter-spacing:.3em;color:#f6e3b6;font-size:11pt;text-shadow:0 1px 6px #000}
+
+/* intro */
+.split{display:grid;grid-template-columns:1fr 62mm;gap:8mm;align-items:start}
+.split img{width:62mm;border-radius:40mm 40mm 4mm 4mm;background:#fff;box-shadow:0 6px 20px rgba(80,50,10,.18)}
+.quote{font-family:'Cormorant Garamond';font-style:italic;font-size:16pt;color:#6b4c18;border-left:3px solid #b8913f;padding:2mm 0 2mm 6mm;margin:5mm 0}
+.highlight{background:linear-gradient(135deg,#2b1f12,#4a3418);color:#f6e7c4;border-radius:5mm;padding:7mm 8mm;margin-top:6mm}
+.highlight b{color:#ffd98a}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:4mm;margin-top:4mm}
+.card{background:#fff;border:1px solid #ecdcb8;border-radius:4mm;padding:4mm 5mm;font-size:10.5pt}
+.card b{display:block;font-family:Cinzel;color:#8a6420;font-size:10.5pt;margin-bottom:1mm}
+
+/* agenda */
+.tl{position:relative;margin:6mm 0 0 4mm;padding-left:10mm;border-left:2px solid #d9bf85}
+.tl .s{position:relative;margin-bottom:6mm}
+.tl .s:before{content:"";position:absolute;left:-14.2mm;top:1mm;width:6mm;height:6mm;border-radius:50%;background:radial-gradient(circle,#fff6d9,#d9a440);box-shadow:0 0 10px #f0c060}
+.tl .when{font-family:Cinzel;color:#8a6420;font-weight:700;font-size:12pt}
+.material{display:grid;grid-template-columns:repeat(4,1fr);gap:4mm;margin-top:5mm}
+.material div{background:#fff;border:1px solid #ecdcb8;border-radius:4mm;padding:5mm 3mm;text-align:center;font-size:10pt}
+.material .ic{font-size:22pt;display:block;margin-bottom:2mm}
+
+/* passos */
+.step{display:grid;grid-template-columns:11mm 1fr;gap:4mm;margin-bottom:4.2mm}
+.num{width:11mm;height:11mm;border-radius:50%;background:#2b1f12;color:#ffd98a;font-family:Cinzel;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:12pt}
+.ex{font-family:'Cormorant Garamond';font-style:italic;font-size:13pt;color:#7a5a24}
+.paper{display:flex;gap:4mm;margin:2mm 0}
+.paper div{flex:1;border:1.5px dashed #c9a86a;border-radius:3mm;padding:3mm;font-size:9.5pt;text-align:center;background:#fff}
+.sigilo{display:flex;align-items:center;gap:6mm;background:#fff;border:1px solid #ecdcb8;border-radius:4mm;padding:4mm;margin-top:2mm}
+.sigilo img{width:30mm;border-radius:2mm}
+
+.sunrise{background:linear-gradient(180deg,#1d1730 0%,#5a3b5e 30%,#d77a4a 62%,#f7c66a 82%,#fbf2dc 100%);color:#fff;padding:20mm 20mm 0;height:95mm;margin:-20mm -20mm 8mm}
+.sunrise h2{color:#fff8e6;text-shadow:0 2px 10px rgba(0,0,0,.4)}
+.sunrise h2 small{color:#ffe1a6}
+
+.egregora{background:radial-gradient(circle at 80% 20%,#5b4320,#1b140b 70%);color:#f3e5c4;border-radius:6mm;padding:8mm;margin-bottom:7mm}
+.egregora h3{color:#ffd98a;margin:0 0 2mm;font-size:15pt}
+.sente{display:flex;flex-wrap:wrap;gap:3mm;margin:3mm 0}
+.sente span{background:#fff;border:1px solid #ecdcb8;border-radius:20mm;padding:1.5mm 5mm;font-size:10pt}
+.cmp{background:#fff;border-radius:4mm;border:1px solid #ecdcb8;padding:4mm 5mm;margin-bottom:3.5mm}
+.no{color:#a03a2a;font-weight:700}.ok{color:#2f6b3a;font-weight:700}
+.assin{display:flex;align-items:center;gap:6mm;margin-top:8mm}
+.assin img{width:34mm;border-radius:50%;aspect-ratio:1;object-fit:cover;object-position:top;background:#fff;border:2px solid #d9bf85}
+.assin .serif{font-size:18pt;font-style:italic;color:#6b4c18}
 </style></head><body>
 
-<h1>RITUAL DA PRIMEIRA LUZ</h1>
-<div class="sub">Ritual coletivo · Egrégora Excitatio Lux · 9 e 10 de novembro de 2026</div>
+<!-- CAPA -->
+<section class="page capa">
+  <div class="glow"></div>
+  <img src="capa.png" alt="">
+  <div class="t">
+    <div class="pre">RITUAL COLETIVO</div>
+    <h1>RITUAL DA<br>PRIMEIRA LUZ</h1>
+    <div class="sub">Corte de karma e quebra de demanda<br>com a egrégora Excitatio Lux</div>
+  </div>
+  <div class="bot">9 E 10 DE NOVEMBRO · COM PRACY</div>
+</section>
 
-<h2>Antes de tudo</h2>
-<p>Olá! Eu sou a Pracy, maga hermetista e adepta da Goétia. Dou aula de magia online e atendo há anos. Mais sobre mim em <b>aprendamagia.com.br</b> e no Instagram <b>@magiacompracy</b>.</p>
-<p>O Ritual da Primeira Luz é um dos rituais mais poderosos que já usei para desbloquear caminhos e cortar bloqueios profundos.</p>
-<p>A primeira vez que fiz esse ritual foi quando meu mestre da época me viu rodando em círculos, sem nada do que eu queria funcionar. Era tudo bloqueado: karmas do passado e energia estagnada que me prendia no lugar. Minha loja de cosméticos estava praticamente parada, com uns três pedidos por semana. Depois do ritual, feito com atenção a cada etapa, passou para cinco a dez pedidos <b>por dia</b>. Desde então refinei essa prática e vi o efeito se repetir comigo, com clientes e com alunos.</p>
-<div class="box">Sabe quando você reza, faz simpatia, acende vela, faz feitiço… e nada chega? Muitas vezes o pedido não falhou: ele bate em algo que trava o seu caminho. <b>Esse ritual não serve para "atrair coisas". Ele remove o que impede essas coisas de chegarem até você.</b> Depois dele, tudo o que você já faz volta a ter força.</div>
+<!-- INTRO -->
+<section class="page">
+  <h2><small>ANTES DE TUDO</small>Uma carta pra você</h2>
+  <div class="gold-line"></div>
+  <div class="split">
+    <div>
+      <p>Olá! Eu sou a Pracy, maga hermetista e adepta da Goétia. Dou aula de magia online e atendo há anos. Você me encontra em <b>aprendamagia.com.br</b> e no Instagram <b>@magiacompracy</b>.</p>
+      <p>O Ritual da Primeira Luz é um dos rituais mais poderosos que já usei para desbloquear caminhos e cortar bloqueios profundos.</p>
+      <p>A primeira vez que fiz esse ritual foi quando meu mestre da época me viu rodando em círculos, sem nada do que eu queria funcionar. Era tudo bloqueado: karmas do passado e energia estagnada que me prendia no lugar.</p>
+    </div>
+    <img src="retrato.png" alt="Pracy">
+  </div>
+  <div class="quote">Minha loja de cosméticos tinha uns três pedidos por semana. Depois do ritual, passou para cinco a dez pedidos por dia.</div>
+  <p>Desde então refinei essa prática e vi o efeito se repetir comigo, com clientes e com alunos. É sempre a primeira prática que eu recomendo quando a vida está tão travada que não adianta fazer trabalho para empurrar pra frente: se você está ancorada no chão, primeiro precisa soltar a âncora.</p>
+  <div class="highlight">
+    Sabe quando você reza, faz simpatia, acende vela, faz feitiço… e nada chega? Muitas vezes o pedido não falhou: ele bate em algo que trava o seu caminho.<br><br>
+    <b>Esse ritual não serve para "atrair coisas". Ele remove o que impede essas coisas de chegarem até você.</b> Depois dele, tudo o que você já faz volta a ter força.
+  </div>
+  <div class="foot"><span>RITUAL DA PRIMEIRA LUZ</span><span>02</span></div>
+</section>
 
-<h2>Para que serve</h2>
-<ul>
-<li><b>Quebrar travas financeiras</b>: dificuldade de fechar contratos, ser promovida, atrair clientes.</li>
-<li><b>Quebrar padrões de escassez</b> e ciclos que sempre te levam ao mesmo fim.</li>
-<li><b>Romper padrões na vida amorosa</b>: relações tóxicas, sensação de nunca ser notada.</li>
-<li><b>Desbloquear a mediunidade</b> e a conexão com guias.</li>
-<li><b>Remover amarras energéticas, kármicas ou magias enviadas contra você.</b></li>
-</ul>
+<!-- PARA QUE SERVE + AGENDA -->
+<section class="page">
+  <h2><small>PARA QUE SERVE</small>O que o ritual corta</h2>
+  <div class="gold-line"></div>
+  <div class="cards">
+    <div class="card"><b>Travas financeiras</b>Dificuldade de fechar contratos, ser promovida, atrair clientes.</div>
+    <div class="card"><b>Padrões de escassez</b>Ciclos que sempre te levam ao mesmo fim nos negócios.</div>
+    <div class="card"><b>Padrões no amor</b>Relações tóxicas, sensação de nunca ser notada.</div>
+    <div class="card"><b>Mediunidade bloqueada</b>Dificuldade de se conectar com guias e entender mensagens.</div>
+    <div class="card" style="grid-column:span 2"><b>Amarras e demandas</b>Amarras energéticas e kármicas, ou magias enviadas contra você.</div>
+  </div>
 
-<h2>Como vão ser os dois dias</h2>
-<table class="agenda">
-<tr><td>Seg 9/11 · 10h</td><td><b>Encontro ao vivo comigo.</b> Eu explico como a magia funciona, por que o seu pedido não está chegando e como escrever o seu papel do jeito certo. Tenha o material em mãos. O link de acesso chega pelo WhatsApp da Lil.ia.</td></tr>
-<tr><td>Seg 9/11 · durante o dia</td><td>Dia limpo: sem álcool, drogas, sexo ou grandes agitações. Escreva o seu papel com calma.</td></tr>
-<tr><td>Seg 9/11 · a partir da meia-noite</td><td><b>Sua parte do ritual: a vela.</b> Eu abro a egrégora Excitatio Lux à meia-noite e, à 1h, faço o ritual com o nome de todos os participantes. A egrégora fica aberta até a manhã seguinte, então não precisa ser no minuto exato.</td></tr>
-<tr><td>Ter 10/11 · nascer do sol</td><td><b>Consolidação na primeira luz do dia.</b></td></tr>
-</table>
+  <h2 style="margin-top:10mm"><small>COMO VAI SER</small>Os dois dias</h2>
+  <div class="gold-line"></div>
+  <div class="tl">
+    <div class="s"><div class="when">Segunda 9/11 · 10h</div><b>Encontro ao vivo comigo.</b> Eu explico como a magia funciona, por que o seu pedido não está chegando e como escrever o seu papel do jeito certo. O link chega pelo WhatsApp da Lil.ia.</div>
+    <div class="s"><div class="when">Segunda 9/11 · durante o dia</div>Dia limpo: sem álcool, drogas, sexo ou grandes agitações. Escreva o seu papel com calma.</div>
+    <div class="s"><div class="when">Segunda 9/11 · a partir da meia-noite</div><b>A vela.</b> Eu abro a egrégora Excitatio Lux à meia-noite e, à 1h, faço o ritual com o nome de todos os participantes. Ela fica aberta até a manhã seguinte, então não precisa ser no minuto exato.</div>
+    <div class="s"><div class="when">Terça 10/11 · nascer do sol</div><b>A consolidação na primeira luz do dia.</b></div>
+  </div>
+  <div class="foot"><span>RITUAL DA PRIMEIRA LUZ</span><span>03</span></div>
+</section>
 
-<h2>O que você vai precisar</h2>
-<ul>
-<li>1 vela branca (comum, pode ser pequena)</li>
-<li>1 pedaço de papel: ¼ de uma folha sulfite (dobre em quatro e use um pedaço)</li>
-<li>1 barbante ou linha de tecido (sem fio plástico)</li>
-<li>Caneta preta ou azul</li>
-</ul>
+<!-- DIA 1 -->
+<section class="page">
+  <h2><small>O QUE VOCÊ VAI PRECISAR</small>Separe antes</h2>
+  <div class="material">
+    <div><span class="ic">🕯️</span>1 vela branca<br><small>comum, pode ser pequena</small></div>
+    <div><span class="ic">📄</span>¼ de folha sulfite<br><small>dobre em quatro</small></div>
+    <div><span class="ic">🧵</span>Barbante ou linha<br><small>de tecido, sem plástico</small></div>
+    <div><span class="ic">🖊️</span>Caneta<br><small>preta ou azul</small></div>
+  </div>
 
-<h2 class="pg">Dia 1 · Segunda à noite: o papel e a vela</h2>
-<p>Fique em casa tranquila. Pode ver um filme, ler, descansar. O importante é manter a energia limpa, estável e focada.</p>
-<ol>
-<li><b>No lado esquerdo do papel, escreva tudo o que você quer cortar:</b> o padrão, a crença ou a trava que te limita. Seja específica.<br><i>Ex.: "Medo de crescer e ocupar espaços de destaque" ou "Crença de que o sucesso traz solidão".</i></li>
-<li><b>No lado direito, escreva o que você quer ativar no lugar, sempre no presente.</b><br><i>Ex.: "Confio plenamente no meu valor e ocupo meu lugar com força e leveza".</i></li>
-<li><b>Rasgue o papel ao meio.</b> Enrole a parte da esquerda (o que será cortado) na vela e amarre com o barbante. Atrás da parte da direita (o que você quer ativar), desenhe este sigilo:
-<div class="sigilo"><img src="sigilo.png" alt="sigilo"></div></li>
-<li><b>A partir da meia-noite, acenda a vela com atenção.</b> Observe a chama por alguns minutos e visualize o que você escreveu na esquerda sendo queimado, dissolvido, desfeito. Não precisa fazer mais nada: só observar, sentir e permitir. Se o papel queimar junto, tudo bem. Se não queimar, também está tudo certo. No dia seguinte, descarte no lixo comum.</li>
-<li><b>Guarde a parte da direita</b> e coloque-a debaixo do travesseiro antes de dormir.</li>
-<li>Coloque o despertador para tocar <b>pelo menos 10 minutos antes do nascer do sol</b>. Para saber o horário, pesquise no Google "nascer do sol 10 de novembro" e o nome da sua cidade.</li>
-</ol>
+  <h2 style="margin-top:9mm"><small>DIA 1 · SEGUNDA À NOITE</small>O papel e a vela</h2>
+  <div class="gold-line"></div>
+  <div class="step"><div class="num">1</div><div><b>No lado esquerdo do papel, escreva tudo o que você quer cortar:</b> o padrão, a crença ou a trava que te limita. Seja específica.<div class="ex">"Medo de crescer e ocupar espaços de destaque."</div></div></div>
+  <div class="step"><div class="num">2</div><div><b>No lado direito, escreva o que você quer ativar no lugar, sempre no presente.</b><div class="ex">"Confio plenamente no meu valor e ocupo meu lugar com força e leveza."</div>
+    <div class="paper"><div><b>ESQUERDA</b><br>o que eu corto</div><div><b>DIREITA</b><br>o que eu ativo</div></div></div></div>
+  <div class="step"><div class="num">3</div><div><b>Rasgue o papel ao meio.</b> Enrole a parte da esquerda na vela e amarre com o barbante. Atrás da parte da direita, desenhe este sigilo:
+    <div class="sigilo"><img src="sigilo.png" alt="sigilo"><span class="serif" style="font-size:13pt;font-style:italic">Copie com calma, com atenção em cada traço.</span></div></div></div>
+  <div class="step"><div class="num">4</div><div><b>A partir da meia-noite, acenda a vela com atenção.</b> Observe a chama por alguns minutos e visualize o que você escreveu na esquerda sendo queimado, dissolvido, desfeito. Só observe, sinta e permita. Se o papel queimar junto, tudo bem. Se não queimar, também está certo: no dia seguinte, descarte no lixo comum.</div></div>
+  <div class="step"><div class="num">5</div><div><b>Guarde a parte da direita debaixo do travesseiro</b> e coloque o despertador para tocar <b>10 minutos antes do nascer do sol</b>. Pesquise no Google "nascer do sol 10 de novembro" e o nome da sua cidade.</div></div>
+  <div class="foot"><span>RITUAL DA PRIMEIRA LUZ</span><span>04</span></div>
+</section>
 
-<h2>Dia 2 · Terça de manhã: a primeira luz</h2>
-<ol>
-<li>Quando acordar, vá para um lugar de onde você veja o céu clareando: janela, varanda ou quintal.</li>
-<li>Leve o papel. Fique ali de 15 a 20 minutos, segurando o papel, olhando a luz do dia surgir e mentalizando com força o que você escreveu. <b>Não pense mais no que foi cortado. Agora você está ativando o novo.</b></li>
-<li>Depois, coloque o papel num lugar visível (espelho, porta do armário) para lembrar todo dia da transformação que você ativou.</li>
-<li>Quando sentir que isso se consolidou, guarde o papel com suas ferramentas mágickas ou num lugar sagrado. Ele vira um talismã.</li>
-</ol>
+<!-- DIA 2 -->
+<section class="page">
+  <div class="sunrise"><h2><small>DIA 2 · TERÇA DE MANHÃ</small>A primeira luz</h2></div>
+  <div class="step"><div class="num">1</div><div>Quando acordar, vá para um lugar de onde você veja o céu clareando: janela, varanda ou quintal.</div></div>
+  <div class="step"><div class="num">2</div><div>Leve o papel. Fique ali de <b>15 a 20 minutos</b>, segurando o papel, olhando a luz do dia surgir e mentalizando com força o que você escreveu.</div></div>
+  <div class="quote" style="margin-left:15mm">Não pense mais no que foi cortado. Agora você está ativando o novo.</div>
+  <div class="step"><div class="num">3</div><div>Depois, coloque o papel num lugar visível (espelho, porta do armário) para lembrar todo dia da transformação que você ativou.</div></div>
+  <div class="step"><div class="num">4</div><div>Quando sentir que isso se consolidou, guarde o papel com suas ferramentas mágickas ou num lugar sagrado. <b>Ele vira um talismã.</b></div></div>
+  <div class="foot"><span>RITUAL DA PRIMEIRA LUZ</span><span>05</span></div>
+</section>
 
-<h2>Sobre a egrégora Excitatio Lux</h2>
-<p>Essa egrégora foi criada e é alimentada por mim. O nome vem do latim e significa <i>Estímulo da Luz</i>, quase um "faça-se a luz". Ela serve exatamente para rituais de corte, limpeza, quebra de padrões energéticos e renascimento espiritual.</p>
+<!-- EGREGORA + DEPOIS + ANEXO -->
+<section class="page">
+  <div class="egregora">
+    <h3>A egrégora Excitatio Lux</h3>
+    Essa egrégora foi criada e é alimentada por mim. O nome vem do latim e significa <i>Estímulo da Luz</i>, quase um "faça-se a luz". Ela serve exatamente para rituais de corte, limpeza, quebra de padrões energéticos e renascimento espiritual.
+  </div>
+  <h2><small>DEPOIS DO RITUAL</small>O que você pode sentir</h2>
+  <div class="sente"><span>Leveza</span><span>Cansaço</span><span>Leve confusão mental</span><span>Sonhos intensos</span><span>Enjoo leve</span><span>Dor de cabeça</span></div>
+  <p>É tudo normal: você está mexendo em energia parada e cortando coisas muito antigas, o que pode trazer uma sensação momentânea de "vazio". <b>Em 2 ou 3 dias tudo se organiza.</b></p>
 
-<h2>Depois do ritual</h2>
-<p>Nos dias seguintes você pode sentir leveza, cansaço, leve confusão mental ou sensações estranhas (enjoo leve, dor de cabeça, sonhos intensos). É tudo normal: você está mexendo em energia parada e cortando coisas muito antigas, o que pode trazer uma sensação momentânea de "vazio". Em 2 ou 3 dias tudo se organiza.</p>
-
-<h2 class="pg">Anexo: como escrever o pedido do jeito certo</h2>
-<p>A forma como você escreve é essencial. <b>O pedido precisa ser específico e objetivo.</b></p>
-<p><span class="no">✗ Não escreva:</span> "Quero desbloquear minha vida financeira."<br><span class="ok">✓ Escreva:</span> "Removo os bloqueios que me impedem de ser promovida no trabalho."</p>
-<p><span class="no">✗ Não escreva:</span> "Quero melhorar minha espiritualidade."<br><span class="ok">✓ Escreva:</span> "Desbloqueio minha mediunidade e ouço e interpreto mensagens espirituais com clareza."</p>
-<p><span class="no">✗ Não escreva:</span> "Quero encontrar um amor."<br><span class="ok">✓ Escreva:</span> "Destruo os padrões que me fazem atrair relações rasas e sem compromisso."</p>
-<div class="box">Dúvidas? Fala com a Lil.ia no WhatsApp. Te vejo segunda às 10h. 🕯️<br>— Pracy</div>
+  <h2 style="margin-top:8mm"><small>ANEXO</small>Como escrever o pedido</h2>
+  <p>A forma como você escreve é essencial. O pedido precisa ser <b>específico e objetivo</b>.</p>
+  <div class="cmp"><span class="no">✗</span> "Quero desbloquear minha vida financeira."<br><span class="ok">✓</span> "Removo os bloqueios que me impedem de ser promovida no trabalho."</div>
+  <div class="cmp"><span class="no">✗</span> "Quero melhorar minha espiritualidade."<br><span class="ok">✓</span> "Desbloqueio minha mediunidade e ouço e interpreto mensagens espirituais com clareza."</div>
+  <div class="cmp"><span class="no">✗</span> "Quero encontrar um amor."<br><span class="ok">✓</span> "Destruo os padrões que me fazem atrair relações rasas e sem compromisso."</div>
+  <div class="assin"><img src="pracy2.png" alt=""><div><div class="serif">Te vejo segunda às 10h.</div><div class="cinzel" style="font-size:12pt">— Pracy</div><small>Dúvidas? Fala com a Lil.ia no WhatsApp.</small></div></div>
+  <div class="foot"><span>RITUAL DA PRIMEIRA LUZ</span><span>06</span></div>
+</section>
 </body></html>
