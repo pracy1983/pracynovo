@@ -2,7 +2,7 @@
 
 **O que é** (nas suas palavras, do vídeo de 13/01/2024): corte de karma e quebra de demanda. É o ritual que você fez antes de começar a prosperar de verdade, ensinado pelo seu mestre. A leveza foi instantânea, "como se alguém tirasse com a mão um peso que eu carregava nas costas a vida toda". Você fez esse ritual muitas vezes para clientes.
 **Prova real:** na edição de fev/2024 foram **mais de 300 ingressos**.
-**Preço:** R$ 75 (preço extra popular).
+**Preço:** R$ 75, **valor social de Black Friday**. Sempre deixar claro que seus ritos coletivos normalmente não saem por esse valor (sem citar outro preço).
 **Formato: 2 dias.** Seg 09/11 às **10h**: encontro ao vivo (preparação e o papel). Seg à meia-noite: a vela (você abre a egrégora Excitatio Lux e faz o ritual coletivo à 1h com o nome de todos). Ter 10/11 no nascer do sol: consolidação na primeira luz.
 **Guia em PDF:** `ritual-primeira-luz/Ritual-da-Primeira-Luz-Guia.pdf` (vai para quem pagar).
 **Inscrição:** pelo WhatsApp, com a Lil.ia. Não tem link de página.
@@ -63,7 +63,7 @@ Eu vivi isso. Eu já trabalhava com magia e as coisas andavam e depois travavam.
 
 Depois disso, o que eu fazia começou a chegar.
 
-Dia 9, às 10 da manhã, eu faço esse ritual ao vivo com você. Ritual da Primeira Luz. R$ 75, preço extra popular.
+Dia 9, às 10 da manhã, eu faço esse ritual ao vivo com você. Ritual da Primeira Luz. R$ 75. É um valor social de Black Friday: meus ritos coletivos não costumam sair por esse valor.
 
 Comenta LUZ que eu te mando como entrar.
 
@@ -181,7 +181,7 @@ Abaixo: **Não é falta de fé. É caminho fechado.** Ritual coletivo ao vivo ·
 - **Direct:** "Oi! Que bom que você vem 🕯️ O Ritual da Primeira Luz é dia 9/11, às 10h da manhã, ao vivo comigo. A inscrição é pelo WhatsApp: clica aqui que a Lil.ia te inscreve." + botão **Quero participar** → WhatsApp da Lil.ia com a mensagem pronta "Quero participar do Ritual da Primeira Luz".
 
 ## LIL.IA: o que ela precisa saber
-> **Ritual Coletivo da Primeira Luz: 09/11/2026, 10h, ao vivo com a Pracy. R$ 75 (preço extra popular).**
+> **Ritual Coletivo da Primeira Luz: 09/11/2026, 10h, ao vivo com a Pracy. R$ 75, **valor social de Black Friday**. Sempre deixar claro que seus ritos coletivos normalmente não saem por esse valor (sem citar outro preço).**
 > O que é: ritual de corte de karma e quebra de demanda. Ele limpa o que trava o caminho, e por isso a oração, a simpatia e o feitiço que a pessoa já faz voltam a ter força. É o ritual que a Pracy fez antes de prosperar, ensinado pelo mestre dela. Ela já fez muitas vezes para clientes, e mais de 300 pessoas participaram em 2024.
 > Para quem é: quem reza, faz simpatia ou feitiço e nada acontece; quem sente que o caminho está fechado ou que carrega um peso.
 > Como inscrever: cobrar R$ 75 e, após o pagamento, confirmar a inscrição e enviar o PDF de preparação. Na véspera e no dia, enviar o link de acesso.
