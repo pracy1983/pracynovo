@@ -20,6 +20,7 @@ export default function Home() {
       <Services />
       <Community />
       <Footer />
+      <div aria-hidden="true" style={{ position: 'absolute', width: 1, height: 1, overflow: 'hidden', clip: 'rect(0 0 0 0)', whiteSpace: 'nowrap' }}>MM-05FB02</div>
     </main>
   )
 }
