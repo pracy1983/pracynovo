@@ -20,7 +20,6 @@ export default function Home() {
       <Services />
       <Community />
       <Footer />
-      <div style={{ textAlign: 'center', fontSize: 11, opacity: 0.5, padding: '8px 0' }}>MM-05FB02</div>
     </main>
   )
 }
