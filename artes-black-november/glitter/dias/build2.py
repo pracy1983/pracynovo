@@ -17,7 +17,7 @@ body{width:%(w)dpx;height:%(h)dpx;background:#000 url(fotos/%(img)s) %(pos)s/cov
 .cnt{font-family:Montserrat;font-weight:800;color:#1a1207;background:#f2a6d8;letter-spacing:2px}
 %(css)s
 </style></head><body><div class="g"></div><div class="frame"></div>%(body)s
-<div class="next">PRÓXIMO RITO COLETIVO: <b>Luxúria</b> · sáb 28/11 · com Lilith e Asmodeus<br>Glitter + Luxúria juntos: <b>R$ 329</b> só até 21/11</div></body></html>'''
+<div class="next">PRÓXIMO RITO COLETIVO: <b>Luxúria</b> · sáb 28/11 · com Lilith e Asmodeus<br>Glitter + Luxúria juntos: <b>R$ 380</b> só até 21/11</div></body></html>'''
 PW = '<div class="price">R$ 175</div><div class="wa" style="margin-top:12px">Chama no WhatsApp: 11 98479-1926</div>'
 
 L = {
