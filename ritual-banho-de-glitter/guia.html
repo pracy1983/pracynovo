@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><title>Banho de Glitter</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<style>:root{--bg:#fcf5f7;--gold:#9a5a86;--gold2:#d7a64a;--foot:#b894ad;--bd:#efd9e6;--quote:#7a4670;--hl:linear-gradient(135deg,#3a1f3d,#6b3a63);--dark:#4a2a4a;--capaend:#12091a;--glow:rgba(255,190,240,.5);--prec:#f6d9ef;--subc:#f9e3f3}
+
+@page{size:A4;margin:0}
+*{box-sizing:border-box}
+body{margin:0;font-family:Lato,sans-serif;color:#2a2118;font-size:10.8pt;line-height:1.5;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:210mm;height:297mm;position:relative;overflow:hidden;page-break-after:always;background:var(--bg);padding:19mm 20mm 18mm}
+.page:last-child{page-break-after:auto}
+h1,h2,h3,.cinzel{font-family:Cinzel,serif;font-weight:700;color:var(--gold);letter-spacing:.04em}
+h2{font-size:20pt;margin:0 0 3mm}
+h2 small{display:block;font-family:Lato;font-size:9pt;letter-spacing:.3em;color:var(--gold2);font-weight:700;margin-bottom:2mm}
+.serif{font-family:'Cormorant Garamond',serif}
+p{margin:0 0 3mm}
+.gold-line{height:2px;background:linear-gradient(90deg,var(--gold2),transparent);margin:3mm 0 5mm;width:60%}
+.foot{position:absolute;bottom:9mm;left:20mm;right:20mm;display:flex;justify-content:space-between;font-size:8pt;color:var(--foot);letter-spacing:.2em;font-family:Cinzel}
+.capa{background:var(--capaend);padding:0;color:#fff}
+.capa .foto{position:absolute;inset:0;background-size:cover;background-position:center bottom}
+.capa .veil{position:absolute;left:0;right:0;top:0;height:120mm;background:linear-gradient(180deg,var(--capaend) 0%,rgba(0,0,0,.55) 55%,transparent 100%)}
+.capa .frame{position:absolute;inset:7mm;border:1.2px solid var(--gold2);opacity:.85}
+.capa .frame:after{content:"";position:absolute;inset:2mm;border:.5px solid var(--gold2);opacity:.7}
+.capa .t{position:absolute;top:22mm;z-index:2;width:100%;text-align:center;padding:0 16mm}
+.capa .t .pre{font-family:Lato;letter-spacing:.5em;font-size:10pt;color:var(--prec)}
+.capa .t h1{color:#fff3d2;font-size:46pt;line-height:1.05;margin:5mm 0;text-shadow:0 0 22px var(--glow),0 2px 8px rgba(0,0,0,.6)}
+.capa .t .sub{font-family:'Cormorant Garamond';font-style:italic;font-size:17pt;color:var(--subc);text-shadow:0 2px 8px rgba(0,0,0,.7)}
+.capa .bot{z-index:2;position:absolute;bottom:0;padding:18mm 0 14mm;background:linear-gradient(180deg,transparent,var(--capaend) 80%);width:100%;text-align:center;font-family:Cinzel;letter-spacing:.3em;color:#f6e3b6;font-size:11pt;text-shadow:0 1px 6px #000}
+.split{display:grid;grid-template-columns:1fr 58mm;gap:8mm;align-items:start}
+.split img{width:58mm;height:78mm;object-fit:cover;object-position:50% 20%;border-radius:40mm 40mm 4mm 4mm;background:#fff;box-shadow:0 6px 20px rgba(80,50,10,.25);border:1.5px solid var(--gold2)}
+.quote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15.5pt;color:var(--quote);border-left:3px solid var(--gold2);padding:2mm 0 2mm 6mm;margin:4mm 0}
+.highlight{background:var(--hl);color:#f6e7c4;border-radius:5mm;padding:6mm 8mm;margin-top:3mm}
+.highlight b{color:#ffd98a}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:4mm;margin-top:3mm}
+.card{background:#fff;border:1px solid var(--bd);border-radius:4mm;padding:4mm 5mm;font-size:10.3pt}
+.card b{display:block;font-family:Cinzel;color:var(--gold);font-size:10.5pt;margin-bottom:1mm}
+.tl{position:relative;margin:5mm 0 0 4mm;padding-left:10mm;border-left:2px solid var(--gold2)}
+.tl .s{position:relative;margin-bottom:5mm}
+.tl .s:before{content:"";position:absolute;left:-14.2mm;top:1mm;width:6mm;height:6mm;border-radius:50%;background:radial-gradient(circle,#fff6d9,var(--gold2));box-shadow:0 0 10px var(--gold2)}
+.tl .when{font-family:Cinzel;color:var(--gold);font-weight:700;font-size:11.5pt}
+.material{display:flex;flex-wrap:wrap;gap:3mm;margin:3mm 0 4mm}
+.material div{background:#fff;border:1px solid var(--bd);border-radius:4mm;padding:3mm 5mm;font-size:10.3pt}
+.step{display:grid;grid-template-columns:11mm 1fr;gap:4mm;margin-bottom:3mm}
+.num{width:11mm;height:11mm;border-radius:50%;background:var(--dark);color:#ffd98a;font-family:Cinzel;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:12pt}
+.ex{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13pt;color:var(--quote)}
+.egregora{background:var(--hl);color:#f3e5c4;border-radius:6mm;padding:5mm 7mm;margin-bottom:4mm;font-size:10.3pt}
+.egregora h3{color:#ffd98a;margin:0 0 2mm;font-size:14pt}
+.sente{display:flex;flex-wrap:wrap;gap:3mm;margin:3mm 0}
+.sente span{background:#fff;border:1px solid var(--bd);border-radius:20mm;padding:1.5mm 5mm;font-size:10pt}
+.cmp{background:#fff;border-radius:4mm;border:1px solid var(--bd);padding:3mm 5mm;margin-bottom:2.5mm;font-size:10.3pt}
+.no{color:#a03a2a;font-weight:700}.ok{color:#2f6b3a;font-weight:700}
+.assin{display:flex;align-items:center;gap:5mm;margin-top:2mm}
+.assin img{width:22mm;height:22mm;border-radius:50%;object-fit:cover;object-position:50% 25%;background:#fff;border:2px solid var(--gold2)}
+.assin .serif{font-size:17pt;font-style:italic;color:var(--quote)}
+.note{background:#fff;border:1px dashed var(--gold2);border-radius:4mm;padding:3mm 5mm;font-size:10pt;margin:3mm 0}
+</style></head><body>
+<section class="page capa">
+  <div class="foto" style="background-image:url('capa.jpg')"></div>
+  <div class="veil"></div><div class="frame"></div>
+  <div class="t"><div class="pre">RITUAL COLETIVO</div><h1>BANHO DE<br>GLITTER</h1><div class="sub">Magnetismo e autoestima<br>com Gremory</div></div>
+  <div class="bot">SÁBADO 21 DE NOVEMBRO · 22H · COM PRACY</div>
+</section>
+<section class="page">
+<h2><small>ANTES DE TUDO</small>Uma carta pra você</h2><div class="gold-line"></div>
+<div class="split"><div>
+<p>Oi, eu sou a Pracy. Quem me conhece sabe: eu sou a pessoa do glitter. Fui blogueira de beleza, ando brilhando o tempo inteiro e sou unicórnio colorido assumida. Por isso, quando criei uma egrégora pra fazer as pessoas serem vistas, o nome não podia ser outro.</p>
+<p>O Banho de Glitter é uma egrégora que eu criei e alimento há anos, feita de tudo o que faz uma pessoa ser notada: magnetismo, atração, simpatia e expansão de energia. Nada a ver com banho de ervas com purpurina. Comecei usando com clientes, e eles voltavam contando: <i>"o meu chefe me notou"</i>, <i>"as pessoas estão me olhando diferente"</i>.</p>
+</div><img src="face.jpg" alt="Pracy"></div>
+<p>Agora a parte pessoal. Faz meses que as pessoas me falam que eu estou diferente, mais leve, mais brilhante. Eu terminei uma relação há pouco tempo, e foi uma relação pesada. Eu precisava voltar a me sentir eu. Primeiro eu fiz o meu divórcio energético, pra soltar tudo o que ainda estava grudado em mim. Depois fiz o meu banho de glitter. E eu <b>reforço o banho de glitter a cada 15 dias</b>, pra me manter brilhando.</p>
+<div class="quote">Dá pra ver nos comentários do meu Instagram: tem muita gente reparando. É isso que eu quero pra você.</div>
+<h2 style="margin-top:3.5mm"><small>PARA QUE SERVE</small>O que o ritual faz</h2><div class="gold-line"></div>
+<div class="cards">
+<div class="card"><b>Magnetismo e atração</b>Você entra num lugar e é vista.</div>
+<div class="card"><b>Autoestima</b>Você volta a gostar do que vê.</div>
+<div class="card"><b>Autocuidado</b>Destrava a energia de cuidar de si, que tinha ficado de lado.</div>
+<div class="card"><b>Ser notada</b>No trabalho, num encontro, numa festa.</div>
+<div class="card" style="grid-column:span 2"><b>Brilho próprio</b>A sua energia fica desbloqueada, e quem está em volta sente.</div></div>
+<div class="foot"><span>BANHO DE GLITTER</span><span>02</span></div>
+</section>
+<section class="page">
+<div class="egregora"><h3>Quem guia esse ritual: Gremory</h3>Neste ritual eu trabalho com <b>Gremory</b>, um dos daemons da Goétia ligado à beleza, ao magnetismo e à atração. Ele é o que faz uma pessoa ser vista e desejada: o brilho que não vem da roupa, vem de dentro. É ele que eu convido pra acender o seu glitter.</div>
+<h2 style="margin-top:3.5mm"><small>COMO VAI SER</small>O sábado 21/11</h2><div class="gold-line"></div>
+<div class="tl">
+<div class="s"><div class="when">Sábado 21/11 · durante o dia</div>Você faz o seu papel do brilho (passos 1 e 2) e <b>manda a foto dele pelo <a href="https://wa.me/5511984791926" style="color:inherit">WhatsApp</a></b>.</div>
+<div class="s"><div class="when">Sábado 21/11 · 22h</div>Você acende a vela ao lado do papel e recebe a egrégora.</div>
+<div class="s"><div class="when">Sábado 21/11 · à noite</div>Eu faço o ritual e ativo o papel de cada participante dentro da egrégora.</div>
+<div class="s"><div class="when">Domingo 22/11</div>Você observa como se sente e como as pessoas reagem.</div></div>
+<h2 style="margin-top:4mm"><small>O QUE VOCÊ VAI PRECISAR</small>Separe antes</h2>
+<div class="material"><div>1 vela (rosa, lilás ou branca)</div><div>1 folha de papel</div><div>Lápis de cor, canetinha ou caneta (se tiver glitter ou purpurina, melhor ainda)</div><div>15 minutos sozinha, sem interrupção</div></div>
+<h2 style="margin-top:3mm"><small>PASSO 1 · DURANTE O DIA</small>Lembre do dia em que você arrasou</h2><div class="gold-line"></div>
+<p>Ache um momento só seu. Feche os olhos e lembre de <b>um dia em que você teve certeza de que estava arrasando</b>: aquela vez em que você entrou num lugar e sentiu os olhares, em que se olhou no espelho e pensou "sou eu", em que tudo deu certo, em que você se sentiu linda, forte, impossível de ignorar.</p>
+<div class="foot"><span>BANHO DE GLITTER</span><span>03</span></div>
+</section>
+<section class="page">
+<p>Lembre dos detalhes. Que roupa você usava? Onde estava? Quem estava em volta? Como era o seu jeito de andar? O que você sentia no peito?</p>
+<p><b>E se você não lembrar de nenhum momento assim, tudo bem.</b> Isso não quer dizer que ele não exista dentro de você. Imagine então como seria esse dia: você chegando num lugar e todo mundo parando pra olhar, você se sentindo segura, leve e magnética. Como seria sentir isso? Onde você sentiria no corpo?</p>
+<div class="quote">Fique nesse sentimento por alguns minutos. É esse sentimento exato que eu vou ativar no ritual.</div>
+<h2 style="margin-top:3.5mm"><small>PASSO 2 · AINDA DURANTE O DIA</small>Desenhe o seu brilho e mande a foto</h2><div class="gold-line"></div>
+<p>Ainda dentro desse sentimento, pegue o papel e <b>desenhe o que você está sentindo</b>. Não precisa saber desenhar. Pode ser uma estrela, um sol, um unicórnio, você mesma, cores, formas, rabiscos, tudo o que vier. Use cores. Se tiver glitter, passe por cima.</p>
+<p>Atrás do papel, escreva o seu <b>nome completo</b> e a sua <b>data de nascimento</b>.</p>
+<div class="highlight"><b>Tire uma foto do desenho e mande pelo <a href="https://wa.me/5511984791926" style="color:#ffd98a">WhatsApp</a>, com o seu nome.</b> Isso potencializa o ritual: é com o seu desenho que eu vou te encontrar dentro da egrégora.</div>
+<h2 style="margin-top:7mm"><small>PASSO 3 · SÁBADO, ÀS 22H</small>Acenda a vela e receba o glitter</h2><div class="gold-line"></div>
+<p>Às 22h, coloque o papel na sua frente e acenda a vela ao lado dele. Sente confortável, olhe pra chama e respire fundo três vezes.</p>
+<p>Agora imagine: lá de cima começa a cair uma chuva de glitter. Ele é dourado, rosa e lilás, e é quente. Cai devagar na sua cabeça, escorre pelo seu rosto e pelos ombros, desce pelo corpo inteiro. Por onde passa, ele limpa o cansaço, o "eu não sou suficiente", a vontade de se esconder.</p>
+<div class="foot"><span>BANHO DE GLITTER</span><span>04</span></div>
+</section>
+<section class="page">
+<p>Cada partícula entra na sua pele e acende uma luz por dentro. Você começa a brilhar do peito pra fora, e essa luz cresce até envolver você inteira. Agora traga de volta o sentimento do passo 1, aquele dia em que você arrasou, e deixe ele se misturar com o brilho. <b>É você, do jeito que você é quando ninguém te apaga.</b></p>
+<p>Fique assim pelo menos 10 minutos. Quando sentir que terminou, agradeça. Deixe a vela queimar até o fim num lugar seguro.</p>
+<h2 style="margin-top:3.5mm"><small>PASSO 4 · DEPOIS DO RITUAL</small>Guarde o seu talismã</h2><div class="gold-line"></div>
+<p>Guarde o papel num lugar especial: pode ser dentro da carteira, do lado da cama ou no seu altar. Ele vira o seu talismã de brilho. Quando precisar ser vista (numa reunião, num encontro, numa festa), segure o papel por um minuto antes de sair e lembre do glitter caindo.</p>
+<div class="note"><b>Quer manter o brilho?</b> Eu reforço o meu a cada 15 dias. Você pode refazer o passo 3 com o mesmo papel quando sentir que o brilho está baixando.</div>
+<h2 style="margin-top:3.5mm"><small>DEPOIS DO RITUAL</small>O que você pode sentir</h2>
+<div class="sente"><span>Mais disposição</span><span>Vontade de se arrumar</span><span>Vaidade</span><span>Mais falante</span><span>Agitação na 1ª noite</span><span>Dificuldade de dormir</span></div>
+<p>O Banho de Glitter é uma carga intensa de energia. No dia seguinte você pode acordar diferente. É a energia se assentando. <b>E preste atenção nas pessoas:</b> quem te olha, quem puxa assunto, quem comenta. Depois me conta.</p>
+<div class="highlight">No sábado 28/11 vem a <b>Luxúria</b>: depois de ser vista, o magnetismo sensual.</div>
+<div class="assin"><img src="face.jpg" alt=""><div><div class="serif">Te vejo no brilho. Sábado, 22h.</div><div class="cinzel" style="font-size:12pt">— Pracy</div><small>Dúvidas? Chame no <a href="https://wa.me/5511984791926" style="color:inherit">WhatsApp: wa.me/5511984791926</a> · magiacompracy.com.br · @magiacompracy</small></div></div>
+<div class="foot"><span>BANHO DE GLITTER</span><span>05</span></div>
+</section>
+</body></html>

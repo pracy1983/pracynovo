@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><title>Luxúria</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<style>:root{--bg:#fbf4f1;--gold:#8a2a3a;--gold2:#c9953c;--foot:#b88a8a;--bd:#ecd2cc;--quote:#7a2a38;--hl:linear-gradient(135deg,#2a0e15,#5a1a2a);--dark:#3a121c;--capaend:#0e0306;--glow:rgba(255,120,120,.45);--prec:#f6d2c0;--subc:#f9dfd0}
+
+@page{size:A4;margin:0}
+*{box-sizing:border-box}
+body{margin:0;font-family:Lato,sans-serif;color:#2a2118;font-size:10.8pt;line-height:1.5;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:210mm;height:297mm;position:relative;overflow:hidden;page-break-after:always;background:var(--bg);padding:19mm 20mm 18mm}
+.page:last-child{page-break-after:auto}
+h1,h2,h3,.cinzel{font-family:Cinzel,serif;font-weight:700;color:var(--gold);letter-spacing:.04em}
+h2{font-size:20pt;margin:0 0 3mm}
+h2 small{display:block;font-family:Lato;font-size:9pt;letter-spacing:.3em;color:var(--gold2);font-weight:700;margin-bottom:2mm}
+.serif{font-family:'Cormorant Garamond',serif}
+p{margin:0 0 3mm}
+.gold-line{height:2px;background:linear-gradient(90deg,var(--gold2),transparent);margin:3mm 0 5mm;width:60%}
+.foot{position:absolute;bottom:9mm;left:20mm;right:20mm;display:flex;justify-content:space-between;font-size:8pt;color:var(--foot);letter-spacing:.2em;font-family:Cinzel}
+.capa{background:var(--capaend);padding:0;color:#fff}
+.capa .foto{position:absolute;inset:0;background-size:cover;background-position:center bottom}
+.capa .veil{position:absolute;left:0;right:0;top:0;height:120mm;background:linear-gradient(180deg,var(--capaend) 0%,rgba(0,0,0,.55) 55%,transparent 100%)}
+.capa .frame{position:absolute;inset:7mm;border:1.2px solid var(--gold2);opacity:.85}
+.capa .frame:after{content:"";position:absolute;inset:2mm;border:.5px solid var(--gold2);opacity:.7}
+.capa .t{position:absolute;top:22mm;z-index:2;width:100%;text-align:center;padding:0 16mm}
+.capa .t .pre{font-family:Lato;letter-spacing:.5em;font-size:10pt;color:var(--prec)}
+.capa .t h1{color:#fff3d2;font-size:46pt;line-height:1.05;margin:5mm 0;text-shadow:0 0 22px var(--glow),0 2px 8px rgba(0,0,0,.6)}
+.capa .t .sub{font-family:'Cormorant Garamond';font-style:italic;font-size:17pt;color:var(--subc);text-shadow:0 2px 8px rgba(0,0,0,.7)}
+.capa .bot{z-index:2;position:absolute;bottom:0;padding:18mm 0 14mm;background:linear-gradient(180deg,transparent,var(--capaend) 80%);width:100%;text-align:center;font-family:Cinzel;letter-spacing:.3em;color:#f6e3b6;font-size:11pt;text-shadow:0 1px 6px #000}
+.split{display:grid;grid-template-columns:1fr 58mm;gap:8mm;align-items:start}
+.split img{width:58mm;height:78mm;object-fit:cover;object-position:50% 20%;border-radius:40mm 40mm 4mm 4mm;background:#fff;box-shadow:0 6px 20px rgba(80,50,10,.25);border:1.5px solid var(--gold2)}
+.quote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15.5pt;color:var(--quote);border-left:3px solid var(--gold2);padding:2mm 0 2mm 6mm;margin:4mm 0}
+.highlight{background:var(--hl);color:#f6e7c4;border-radius:5mm;padding:6mm 8mm;margin-top:3mm}
+.highlight b{color:#ffd98a}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:4mm;margin-top:3mm}
+.card{background:#fff;border:1px solid var(--bd);border-radius:4mm;padding:4mm 5mm;font-size:10.3pt}
+.card b{display:block;font-family:Cinzel;color:var(--gold);font-size:10.5pt;margin-bottom:1mm}
+.tl{position:relative;margin:5mm 0 0 4mm;padding-left:10mm;border-left:2px solid var(--gold2)}
+.tl .s{position:relative;margin-bottom:5mm}
+.tl .s:before{content:"";position:absolute;left:-14.2mm;top:1mm;width:6mm;height:6mm;border-radius:50%;background:radial-gradient(circle,#fff6d9,var(--gold2));box-shadow:0 0 10px var(--gold2)}
+.tl .when{font-family:Cinzel;color:var(--gold);font-weight:700;font-size:11.5pt}
+.material{display:flex;flex-wrap:wrap;gap:3mm;margin:3mm 0 4mm}
+.material div{background:#fff;border:1px solid var(--bd);border-radius:4mm;padding:3mm 5mm;font-size:10.3pt}
+.step{display:grid;grid-template-columns:11mm 1fr;gap:4mm;margin-bottom:3mm}
+.num{width:11mm;height:11mm;border-radius:50%;background:var(--dark);color:#ffd98a;font-family:Cinzel;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:12pt}
+.ex{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13pt;color:var(--quote)}
+.egregora{background:var(--hl);color:#f3e5c4;border-radius:6mm;padding:5mm 7mm;margin-bottom:4mm;font-size:10.3pt}
+.egregora h3{color:#ffd98a;margin:0 0 2mm;font-size:14pt}
+.sente{display:flex;flex-wrap:wrap;gap:3mm;margin:3mm 0}
+.sente span{background:#fff;border:1px solid var(--bd);border-radius:20mm;padding:1.5mm 5mm;font-size:10pt}
+.cmp{background:#fff;border-radius:4mm;border:1px solid var(--bd);padding:3mm 5mm;margin-bottom:2.5mm;font-size:10.3pt}
+.no{color:#a03a2a;font-weight:700}.ok{color:#2f6b3a;font-weight:700}
+.assin{display:flex;align-items:center;gap:5mm;margin-top:2mm}
+.assin img{width:22mm;height:22mm;border-radius:50%;object-fit:cover;object-position:50% 25%;background:#fff;border:2px solid var(--gold2)}
+.assin .serif{font-size:17pt;font-style:italic;color:var(--quote)}
+.note{background:#fff;border:1px dashed var(--gold2);border-radius:4mm;padding:3mm 5mm;font-size:10pt;margin:3mm 0}
+</style></head><body>
+<section class="page capa">
+  <div class="foto" style="background-image:url('capa.jpg')"></div>
+  <div class="veil"></div><div class="frame"></div>
+  <div class="t"><div class="pre">RITUAL COLETIVO</div><h1>LUXÚRIA</h1><div class="sub">Magnetismo sensual<br>com Lilith e Asmodeus</div></div>
+  <div class="bot">SÁBADO 28 DE NOVEMBRO · 22H · COM PRACY</div>
+</section>
+<section class="page">
+<h2><small>ANTES DE TUDO</small>Uma carta pra você</h2><div class="gold-line"></div>
+<div class="split"><div>
+<p>Oi, eu sou a Pracy, maga unicorniana e adepta da Goétia.</p>
+<p>Tem uma energia que a gente aprende a apagar: a do desejo. Ser bonita, sensual, querida, olhada com vontade. Mulher que quer demais é "exagerada". Mulher que atrai demais é "provocante". E aí a gente se encolhe.</p>
+<p>Depois de soltar o que pesava e de acender o meu brilho, eu fiz o passo seguinte: voltei a me permitir querer, e ser querida.</p>
+</div><img src="face.jpg" alt="Pracy"></div>
+<p>A Luxúria vai além do sexo: é <b>magnetismo sensual</b>, aquela presença que faz as pessoas olharem, se aproximarem, quererem estar perto. Atração no amor, no flerte, e em qualquer lugar onde você quer ser desejada.</p>
+<div class="quote">Meu primeiro ritual de evocação, em 2015, foi pra Lilith. Pedi pra atrair uma pessoa específica. Naquela mesma noite, chegaram mensagens de vários homens que fazia tempo que não falavam comigo. Menos o que eu queria.</div>
+<p>Aprendi ali uma coisa que repito até hoje: <b>a magia procura o caminho mais fácil.</b> Por isso a Luxúria não prende ninguém, não amarra e não força a vontade de ninguém. Ela abre o <b>seu</b> magnetismo. Quem se aproxima vem pela presença que você passa a ter.</p>
+<h2 style="margin-top:3.5mm"><small>PARA QUE SERVE</small>O que o ritual faz</h2><div class="gold-line"></div>
+<div class="cards">
+<div class="card"><b>Atrair pessoas</b>Flerte, paixão, olhares.</div>
+<div class="card"><b>Despertar a sensualidade</b>E o desejo por você mesma.</div>
+<div class="card"><b>Voltar a querer</b>E se permitir ser querida.</div>
+<div class="card"><b>Tirar a culpa</b>E a vergonha do desejo.</div></div>
+<div class="foot"><span>LUXÚRIA</span><span>02</span></div>
+</section>
+<section class="page">
+<div class="egregora"><h3>Quem guia esse ritual: Lilith e Asmodeus</h3>Eu trabalho com <b>Lilith</b>, a mulher que não pede licença, não se submete e não se desculpa por querer. Ela faz parte da minha história desde 2015. Lilith não está entre os 72 daemons da Goétia, mas a Goétia é um sistema de evocação, e eu a chamo desde o meu primeiro ritual.<br><br>E com <b>Asmodeus</b>, o daemon da Goétia mais ligado à luxúria e ao desejo. Juntos, eles abrem o seu magnetismo sensual.<br><br>Aqui você não pede que alguém resolva a sua vida. É um acordo consciente: você faz a sua parte e a egrégora amplifica.</div>
+<div class="note"><b>Ritual para maiores de 18 anos.</b> Ele não promete resultado garantido e não serve pra prender, manipular ou forçar ninguém.</div>
+<h2 style="margin-top:3mm"><small>COMO VAI SER</small>O sábado 28/11</h2><div class="gold-line"></div>
+<div class="tl">
+<div class="s"><div class="when">Sábado 28/11 · durante o dia</div>Você faz o seu papel do desejo (passos 1 e 2) e <b>manda a foto dele pelo <a href="https://wa.me/5511984791926" style="color:inherit">WhatsApp</a></b>.</div>
+<div class="s"><div class="when">Sábado 28/11 · 22h</div>Você acende a vela ao lado do papel, diante do espelho, e recebe a egrégora.</div>
+<div class="s"><div class="when">Sábado 28/11 · à noite</div>Eu faço o ritual e ativo o papel de cada participante dentro da egrégora.</div>
+<div class="s"><div class="when">Domingo 29/11</div>Você observa como se sente e como as pessoas reagem a você.</div></div>
+<h2 style="margin-top:3mm"><small>O QUE VOCÊ VAI PRECISAR</small>Separe antes</h2>
+<div class="material"><div>1 vela <b>vermelha</b> (ou bordô, ou preta)</div><div>1 folha de papel</div><div>Caneta ou lápis (vermelho, se tiver)</div><div>Um perfume ou óleo que você ame</div><div>Um espelho</div><div>20 minutos sozinha, sem interrupção</div></div>
+<div class="foot"><span>LUXÚRIA</span><span>03</span></div>
+</section>
+<section class="page">
+<h2><small>PASSO 1 · DURANTE O DIA</small>Lembre de quando você se sentiu desejada</h2><div class="gold-line"></div>
+<p>Ache um momento só seu e feche os olhos. Lembre de uma vez em que você se sentiu <b>desejável</b>: quando alguém olhou pra você de um jeito que você sentiu no corpo, ou quando você mesma se olhou no espelho e pensou "que mulher". Não precisa ser sobre uma pessoa. O que importa é como você se sentiu.</p>
+<p>Onde você sentiu isso? No peito, na barriga, na pele? Que roupa você usava? Como era o seu jeito de andar, de sentar, de olhar?</p>
+<p><b>E se você não lembrar de nenhum momento assim, tudo bem.</b> Imagine como seria: você se sentindo dona do seu corpo e do seu querer, sem culpa e sem pedir desculpa. Fique nesse sentimento por alguns minutos. É ele que eu vou ativar.</p>
+<h2 style="margin-top:3.5mm"><small>PASSO 2 · AINDA DURANTE O DIA</small>Escreva, desenhe e mande a foto</h2><div class="gold-line"></div>
+<p>No papel, escreva <b>o que você se permite querer</b>, sempre no presente e falando de você, não de uma pessoa. Depois desenhe o que você sentiu: cores quentes, chamas, formas, o que vier. Não precisa saber desenhar.</p>
+<div class="cmp"><span class="no">✗</span> "Quero que o Fulano me procure."<br><span class="ok">✓</span> "Eu me permito ser desejada com intensidade e respeito."</div>
+<div class="cmp"><span class="no">✗</span> "Quero ser a mais bonita da festa."<br><span class="ok">✓</span> "Eu sou uma presença magnética: quem me vê, quer chegar perto."</div>
+<p>Atrás do papel, escreva o seu <b>nome completo</b> e a sua <b>data de nascimento</b>.</p>
+<div class="highlight"><b>Tire uma foto do papel e mande pelo <a href="https://wa.me/5511984791926" style="color:#ffd98a">WhatsApp</a>, com o seu nome.</b> É com ele que eu vou te encontrar dentro da egrégora.</div>
+<div class="foot"><span>LUXÚRIA</span><span>04</span></div>
+</section>
+<section class="page">
+<h2><small>PASSO 3 · SÁBADO, ÀS 22H</small>A vela e o espelho</h2><div class="gold-line"></div>
+<div class="step"><div class="num">1</div><div><b>Prepare-se.</b> Tome um banho com calma, passe o seu perfume ou óleo no pescoço e nos pulsos. Vista algo que faça você se sentir bem. Fique num lugar onde ninguém interrompa.</div></div>
+<div class="step"><div class="num">2</div><div><b>Acenda a vela vermelha ao lado do papel</b>, de frente pro espelho. Respire fundo três vezes.</div></div>
+<div class="step"><div class="num">3</div><div><b>Olhe nos seus próprios olhos por alguns minutos.</b> Sem julgar. Só se ver. Sinta um calor começando nos pés e subindo devagar pelo corpo, vermelho e dourado, até o peito e o rosto.</div></div>
+<div class="step"><div class="num">4</div><div>Visualize atrás de você a presença de Lilith: uma mulher inteira, que não pede licença, olhando pro espelho junto com você. E ao seu lado Asmodeus, o calor do desejo. Sinta esse calor se espalhando pelo seu corpo e saindo pela sua pele, como um perfume que as pessoas sentem quando você passa.</div></div>
+<div class="step"><div class="num">5</div><div>Diga em voz alta, olhando pro espelho: <span class="ex">"Eu me permito querer. Eu me permito ser querida. Está feito, está feito, está feito."</span></div></div>
+<div class="step"><div class="num">6</div><div>Fique assim pelo menos 10 minutos. Quando sentir que terminou, agradeça. <b>Deixe a vela queimar até o fim</b> num lugar seguro.</div></div>
+<h2 style="margin-top:3mm"><small>PASSO 4 · DEPOIS DO RITUAL</small>Guarde o seu talismã</h2><div class="gold-line"></div>
+<p>Guarde o papel num lugar especial: a carteira, o lado da cama, o seu altar. Ele vira o seu talismã do desejo. Quando precisar da presença, segure o papel por um minuto antes de sair e lembre do calor subindo.</p>
+<h2 style="margin-top:4mm"><small>DEPOIS DO RITUAL</small>O que você pode sentir</h2>
+<div class="sente"><span>Calor no corpo</span><span>Vontade de se arrumar</span><span>Sonhos intensos</span><span>Mais ousadia</span><span>Agitação na 1ª noite</span></div>
+<p>É a energia se assentando. <b>Preste atenção em como as pessoas reagem a você</b> nos dias seguintes: olhares, conversas, aproximações. Depois me conta.</p>
+<div class="assin"><img src="face.jpg" alt=""><div><div class="serif">Quem se permite querer, atrai. Sábado, 22h.</div><div class="cinzel" style="font-size:12pt">— Pracy</div><small>Dúvidas? Chame no <a href="https://wa.me/5511984791926" style="color:inherit">WhatsApp: wa.me/5511984791926</a> · magiacompracy.com.br · @magiacompracy</small></div></div>
+<div class="foot"><span>LUXÚRIA</span><span>05</span></div>
+</section>
+</body></html>
