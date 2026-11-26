@@ -52,11 +52,11 @@ L = {
  '25': ('l4.png', '20% top', RIGHT, CSS_R + RIB,
    '<div class="cnt rib">FALTAM 3 DIAS</div><div class="blk"><div class="t" style="font-size:100px">Luxúria</div><div class="d" style="font-size:28px;margin-top:20px;font-family:Montserrat;font-weight:600;letter-spacing:3px">COM O REI DO DESEJO</div><div class="gr" style="font-size:96px;line-height:1">Asmodeus</div>' + d(33, 'O daemon da Goétia mais ligado à luxúria. Junto com <b>Lilith</b>, abre o seu magnetismo. ' + DATA) + pw() + '</div>'),
  '26': ('l5.png', 'center 30%', BOT, BADGE + CSS_BOT,
-   '<div class="badge"><div class="s">FALTAM</div><div class="n">2</div><div class="s">DIAS</div></div><div class="blk">' + T % 110 + GR % 54 + d(34, 'Não se sente <b>desejada há muito tempo</b>? Acha que atrair é coisa dos outros? <b>' + DATA + '</b>') + pw() + '</div>'),
+   '<div class="badge"><div class="s">FALTAM</div><div class="n">2</div><div class="s">DIAS</div></div><div class="blk">' + T % 110 + GR % 54 + d(34, 'Faz quanto tempo que ninguém <b>te deseja de verdade</b>? Magnetismo <b>s3xual</b> pra atrair desejo e s3xo. <b>' + DATA + '</b>') + pw() + '</div>'),
  '27': ('l6.png', '30% top', RIGHT, CSS_R + PILL,
-   '<div class="blk"><span class="cnt">É AMANHÃ · 22H</span><div class="t" style="font-size:96px;margin-top:26px">Luxúria</div><div class="gr" style="font-size:56px;margin-top:6px">com Lilith<br>e Asmodeus</div>' + d(33, 'Primeiro solta, depois brilha, <b>depois atrai</b>. O último ritual da sequência é amanhã.') + pw() + '</div>'),
+   '<div class="blk"><span class="cnt">É AMANHÃ · 22H</span><div class="t" style="font-size:96px;margin-top:26px">Luxúria</div><div class="gr" style="font-size:56px;margin-top:6px">com Lilith<br>e Asmodeus</div>' + d(33, 'Primeiro solta, depois brilha, <b>depois atrai</b>. Magnetismo <b>s3xual</b> pra atrair desejo e s3xo. É amanhã.') + pw() + '</div>'),
  '28': ('l7.png', 'center 30%', TB, HOJE + CSS_BOT,
-   '<div class="top"><div class="h">HOJE</div><div class="s">22H · INSCRIÇÃO ATÉ AS 20H</div></div><div class="blk">' + T % 110 + GR % 58 + d(34, '<b>Última chamada.</b> Quem se permite querer, atrai.') + pw() + '</div>'),
+   '<div class="top"><div class="h">HOJE</div><div class="s">22H · INSCRIÇÃO ATÉ AS 20H</div></div><div class="blk">' + T % 110 + GR % 58 + d(34, '<b>Última chamada.</b> Magnetismo <b>s3xual</b> pra atrair desejo e s3xo. Quem se permite querer, atrai.') + pw() + '</div>'),
 }
 SIZES = {'feed': (1080, 1350, dict(b='170px', t='120px', c='190px'), 60),
          'story': (1080, 1920, dict(b='290px', t='300px', c='320px'), 150)}
